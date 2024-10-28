@@ -278,69 +278,64 @@
             </p>
             
             <!-- Tool Schema Box -->
-            <div class="box has-background-info-light" style="border: 2px solid #3298dc; padding: 1.5rem; margin-top: 1.5rem;">
-              <h3 class="title is-4 has-text-info-dark">Markdown-formatted tool schema for FillMissingValues</h3>
-              
-              <div class="columns">
-                <!-- Left Column -->
-                <div class="column is-half content has-text-left">
-                  <p><strong>Description:</strong> Fill missing values in specified columns of a DataFrame. This tool can handle both numerical and categorical features by using different filling methods.</p>
+            <div class="schema-container">
+              <div class="schema-box">
+                <h2 class="schema-title">Markdown-formatted tool schema for FillMissingValues</h2>
+                <div class="schema-content">
+                  <!-- Left Column -->
+                  <div class="schema-section">
+                    <h3>Overview</h3>
+                    <p><strong>Description:</strong> Fill missing values in specified columns of a DataFrame. This tool can handle both numerical and categorical features by using different filling methods.</p>
+                    
+                    <p><strong>Applicable Situations:</strong> Handle missing values in various types of features.</p>
+                    
+                    <h3>Core Parameters</h3>
+                    <ul class="param-list">
+                      <li>
+                        <strong class="param-name">data</strong>
+                        <div><span class="type-tag">Type: pd.DataFrame</span></div>
+                        <div>A pandas DataFrame object representing the dataset.</div>
+                      </li>
+                      <li>
+                        <strong class="param-name">columns</strong>
+                        <div><span class="type-tag">Type: string | array</span></div>
+                        <div>The name(s) of the column(s) where missing values should be filled.</div>
+                      </li>
+                      <li>
+                        <strong class="param-name">method</strong>
+                        <div><span class="type-tag">Type: string</span></div>
+                        <div>The method to use for filling missing values.</div>
+                        <div>Enum: auto | mean | median | mode | constant</div>
+                        <div>Default: auto</div>
+                      </li>
+                    </ul>
+                  </div>
                   
-                  <p><strong>Applicable Situations:</strong> Handle missing values in various types of features.</p>
-                  
-                  <p><strong>Parameters:</strong></p>
-                  <ul>
-                    <li>
-                      <strong><code>data</code>:</strong>
-                      <ul>
-                        <li><strong>Type:</strong> <code>pd.DataFrame</code></li>
-                        <li><strong>Description:</strong> A pandas DataFrame object representing the dataset.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <strong><code>columns</code>:</strong>
-                      <ul>
-                        <li><strong>Type:</strong> <code>string | array</code></li>
-                        <li><strong>Description:</strong> The name(s) of the column(s) where missing values should be filled.</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-                
-                <!-- Right Column -->
-                <div class="column is-half content has-text-left">
-                  <ul>
-                    <li>
-                      <strong><code>method</code>:</strong>
-                      <ul>
-                        <li><strong>Type:</strong> <code>string</code></li>
-                        <li><strong>Description:</strong> The method to use for filling missing values.</li>
-                        <li><strong>Enum:</strong> <code>auto | mean | median | mode | constant</code></li>
-                        <li><strong>Default:</strong> <code>auto</code></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <strong><code>fill_value</code>:</strong>
-                      <ul>
-                        <li><strong>Type:</strong> <code>number | string | null</code></li>
-                        <li><strong>Description:</strong> The value to use when method is <code>constant</code>.</li>
-                        <li><strong>Default:</strong> <code>None</code></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  
-                  <p><strong>Required:</strong> <code>data</code>, <code>columns</code></p>
-                  
-                  <p><strong>Result:</strong> Successfully fill missing values in the specified column(s) of data.</p>
-                  
-                  <p><strong>Notes:</strong></p>
-                  <ul>
-                    <li>The <code>auto</code> method uses mean for numeric columns and mode for non-numeric columns.</li>
-                    <li>Using <code>mean</code> or <code>median</code> on non-numeric columns will raise an error.</li>
-                    <li>The <code>mode</code> method uses the most frequent value, which may not always be appropriate.</li>
-                    <li>Filling missing values can introduce bias, especially if the data is not missing completely at random.</li>
-                    <li>Consider the impact of filling missing values on your analysis and model performance.</li>
-                  </ul>
+                  <!-- Right Column -->
+                  <div class="schema-section">
+                    <h3>Additional Settings</h3>
+                    <ul class="param-list">
+                      <li>
+                        <strong class="param-name">fill_value</strong>
+                        <div><span class="type-tag">Type: number | string | null</span></div>
+                        <div>The value to use when method is constant.</div>
+                        <div>Default: None</div>
+                      </li>
+                    </ul>
+                    
+                    <h3>Requirements & Results</h3>
+                    <p><strong>Required Parameters:</strong> <span class="param-name">data</span>, <span class="param-name">columns</span></p>
+                    <p><strong>Result:</strong> Successfully fill missing values in the specified column(s) of data.</p>
+                    
+                    <h3>Important Notes</h3>
+                    <ul class="notes-list">
+                      <li>The <span class="param-name">auto</span> method uses mean for numeric columns and mode for non-numeric columns.</li>
+                      <li>Using <span class="param-name">mean</span> or <span class="param-name">median</span> on non-numeric columns will raise an error.</li>
+                      <li>The <span class="param-name">mode</span> method uses the most frequent value, which may not always be appropriate.</li>
+                      <li>Filling missing values can introduce bias, especially if the data is not missing completely at random.</li>
+                      <li>Consider the impact of filling missing values on your analysis and model performance.</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -585,6 +580,73 @@
   </footer>
 
   <style>
+    .schema-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    
+    .schema-box {
+      border: 2px solid #3298dc;
+      border-radius: 8px;
+      background-color: #f0f7ff;
+      padding: 2rem;
+    }
+    
+    .schema-title {
+      text-align: center;
+      color: #2160c4;
+      margin: -1rem 0 1.5rem 0;
+      padding: 0.5rem;
+      border-bottom: 2px solid #3298dc;
+    }
+    
+    .schema-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    
+    .schema-section {
+      padding: 0 1rem;
+    }
+    
+    .schema-section h3 {
+      color: #2160c4;
+      margin-bottom: 1rem;
+    }
+    
+    .param-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .param-list li {
+      margin-bottom: 1rem;
+    }
+    
+    .param-name {
+      font-family: monospace;
+      background-color: #e8f0fe;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    
+    .type-tag {
+      font-family: monospace;
+      color: #2160c4;
+      font-size: 0.9em;
+    }
+    
+    .notes-list {
+      padding-left: 1.2rem;
+    }
+    
+    .notes-list li {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+  
     .hidden {
       display: none;
     }
