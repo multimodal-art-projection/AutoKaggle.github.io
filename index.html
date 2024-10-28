@@ -252,7 +252,7 @@
             <div class="content has-text-centered">
               <img src="static/images/unit_test.png" alt="unit_test" width="100%" />
               <p style="text-align: center;">
-                Development based on Iterative debugging and testing.
+                Figure 2: Development based on Iterative debugging and testing.
               </p>
             </div>
 
@@ -275,946 +275,306 @@
     <div class="container">
       <div class="columns is-centered m-6">
         <div class="column is-full has-text-centered content">
-          <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+          <h2 class="title is-3">Main Results</h2>
           <div class="content">
-            <button id="toggleButton" onclick="changeButtonText()"><b
-                style='font-size: larger;'>CodeEditorBench_Plus</b> (Click to Switch)</button>
-            <div class="model-labels-container">
-              <span class="leaderboard-label" style="background-color: rgba(249, 242, 248, 1);">Closed-Source</span>
-              <span class="leaderboard-label" style="background-color: rgba(117, 209, 215, 0.1);">Open-Source</span>
-            </div>
-
-            <table id="table1" class="js-sort-table">
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td><strong>Model</strong></td>
-                <td><strong>Size</strong></td>
-                <td><strong>Debug</strong></td>
-                <td><strong>Translation</strong></td>
-                <td><strong>Switch</strong></td>
-                <td><strong>Polishment Score</strong></td>
-                <td><strong>Win Rate</strong></td>
-              </tr>
-              <tr>
-                <td colspan="8">Zero-shot</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-4-0613</td>
-                <td>-</td>
-                <td>0.316</td>
-                <td>0.465</td>
-                <td>0.264</td>
-                <td>1.12%</td>
-                <td>0.855</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">OpenCodeInterpreter-DS-33B</td>
-                <td>33B</td>
-                <td>0.236</td>
-                <td>0.368</td>
-                <td>0.141</td>
-                <td>6.02%</td>
-                <td>0.776</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-ultra</td>
-                <td>-</td>
-                <td>0.304</td>
-                <td>0.378</td>
-                <td>0.041</td>
-                <td>5.31%</td>
-                <td>0.750</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">deepseek-coder-33B-instruct</td>
-                <td>33B</td>
-                <td>0.275</td>
-                <td>0.410</td>
-                <td>0.162</td>
-                <td>1.10%</td>
-                <td>0.737</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-pro</td>
-                <td>-</td>
-                <td>0.286</td>
-                <td>0.344</td>
-                <td>0.076</td>
-                <td>5.86%</td>
-                <td>0.737</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-3.5-turbo-1106</td>
-                <td>-</td>
-                <td>0.290</td>
-                <td>0.475</td>
-                <td>0.177</td>
-                <td>0.09%</td>
-                <td>0.724</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">OpenCodeInterpreter-DS-6.7B</td>
-                <td>6.7B</td>
-                <td>0.233</td>
-                <td>0.357</td>
-                <td>0.126</td>
-                <td>4.45%</td>
-                <td>0.671</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">WizardCoder-33B-V1.1</td>
-                <td>33B</td>
-                <td>0.274</td>
-                <td>0.371</td>
-                <td>0.156</td>
-                <td>0.79%</td>
-                <td>0.632</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">glm-4</td>
-                <td>-</td>
-                <td>0.220</td>
-                <td>0.278</td>
-                <td>0.085</td>
-                <td>5.17%</td>
-                <td>0.526</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Magicoder-S-DS-6.7B</td>
-                <td>6.7B</td>
-                <td>0.242</td>
-                <td>0.343</td>
-                <td>0.130</td>
-                <td>0.21%</td>
-                <td>0.513</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Phind-CodeLlama-34B-v2</td>
-                <td>34B</td>
-                <td>0.230</td>
-                <td>0.279</td>
-                <td>0.074</td>
-                <td>2.84%</td>
-                <td>0.500</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">octocoder</td>
-                <td>15.5B</td>
-                <td>0.042</td>
-                <td>0.392</td>
-                <td>0.030</td>
-                <td>1.39%</td>
-                <td>0.434</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-13B-Instruct-hf</td>
-                <td>13B</td>
-                <td>0.176</td>
-                <td>0.333</td>
-                <td>0.021</td>
-                <td>2.31%</td>
-                <td>0.421</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-34B-hf</td>
-                <td>34B</td>
-                <td>0.163</td>
-                <td>0.310</td>
-                <td>0.052</td>
-                <td>1.10%</td>
-                <td>0.382</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Magicoder-S-CL-7B</td>
-                <td>7B</td>
-                <td>0.174</td>
-                <td>0.272</td>
-                <td>0.039</td>
-                <td>1.31%</td>
-                <td>0.329</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">WizardCoder-15B-V1.0</td>
-                <td>15B</td>
-                <td>0.159</td>
-                <td>0.309</td>
-                <td>0.067</td>
-                <td>0.91%</td>
-                <td>0.329</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-7B-Instruct-hf</td>
-                <td class="s7">7B</td>
-                <td>0.155</td>
-                <td>0.289</td>
-                <td>0.017</td>
-                <td>1.47%</td>
-                <td>0.289</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-34B-Instruct-hf</td>
-                <td>34B</td>
-                <td>0.131</td>
-                <td>0.287</td>
-                <td>0.027</td>
-                <td>1.02%</td>
-                <td>0.211</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeFuse-CodeLlama-34B</td>
-                <td>34B</td>
-                <td>0.166</td>
-                <td>0.218</td>
-                <td>0.028</td>
-                <td>0.33%</td>
-                <td>0.184</td>
-              </tr>
-              <tr>
-                <td colspan="7">Three-shot</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-ultra</td>
-                <td>-</td>
-                <td>0.286</td>
-                <td>0.443</td>
-                <td>0.152</td>
-                <td>5.62%</td>
-                <td>0.855</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-4-0613</td>
-                <td>-</td>
-                <td>0.345</td>
-                <td>0.517</td>
-                <td>0.303</td>
-                <td>1.13%</td>
-                <td>0.816</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">OpenCodeInterpreter-DS-6.7B</td>
-                <td>6.7B</td>
-                <td>0.233</td>
-                <td>0.372</td>
-                <td>0.165</td>
-                <td>6.47%</td>
-                <td>0.770</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">OpenCodeInterpreter-DS-33B</td>
-                <td>33B</td>
-                <td>0.230</td>
-                <td>0.371</td>
-                <td>0.229</td>
-                <td>5.75%</td>
-                <td>0.763</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);;">
-                <td style="text-align: left;">deepseek-coder-33B-instruct</td>
-                <td>33B</td>
-                <td>0.272</td>
-                <td>0.417</td>
-                <td>0.235</td>
-                <td>1.18%</td>
-                <td>0.737</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-3.5-turbo-1106</td>
-                <td>-</td>
-                <td>0.270</td>
-                <td>0.364</td>
-                <td>0.201</td>
-                <td>1.54%</td>
-                <td>0.684</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-pro</td>
-                <td>-</td>
-                <td>0.229</td>
-                <td>0.392</td>
-                <td>0.139</td>
-                <td>5.23%</td>
-                <td>0.671</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">WizardCoder-33B-V1.1</td>
-                <td>33B</td>
-                <td>0.279</td>
-                <td>0.362</td>
-                <td>0.243</td>
-                <td>0.65%</td>
-                <td>0.645</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Magicoder-S-DS-6.7B</td>
-                <td>6.7B</td>
-                <td>0.262</td>
-                <td>0.321</td>
-                <td>0.192</td>
-                <td>1.44%</td>
-                <td>0.605</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">glm-4</td>
-                <td>-</td>
-                <td>0.233</td>
-                <td>0.299</td>
-                <td>0.100</td>
-                <td>5.30%</td>
-                <td>0.572</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-34B-hf</td>
-                <td>34B</td>
-                <td>0.133</td>
-                <td>0.307</td>
-                <td>0.113</td>
-                <td>1.75%</td>
-                <td>0.474</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Phind-CodeLlama-34B-v2</td>
-                <td>34B</td>
-                <td>0.239</td>
-                <td>0.275</td>
-                <td>0.092</td>
-                <td>1.20%</td>
-                <td>0.421</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-13B-Instruct-hf</td>
-                <td>13B</td>
-                <td>0.160</td>
-                <td>0.327</td>
-                <td>0.028</td>
-                <td>1.75%</td>
-                <td>0.414</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Magicoder-S-CL-7B</td>
-                <td class="s7">7B</td>
-                <td>0.157</td>
-                <td>0.245</td>
-                <td>0.075</td>
-                <td>1.70%</td>
-                <td>0.329</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">WizardCoder-15B-V1.0</td>
-                <td>15B</td>
-                <td>0.114</td>
-                <td>0.271</td>
-                <td>0.099</td>
-                <td>1.65%</td>
-                <td>0.322</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeFuse-CodeLlama-34B</td>
-                <td>34B</td>
-                <td>0.166</td>
-                <td>0.240</td>
-                <td>0.050</td>
-                <td>1.61%</td>
-                <td>0.289</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">octocoder</td>
-                <td>15.5B</td>
-                <td>0.050</td>
-                <td>0.290</td>
-                <td>0.054</td>
-                <td>1.09%</td>
-                <td>0.211</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-7B-Instruct-hf</td>
-                <td>7B</td>
-                <td>0.167</td>
-                <td>0.271</td>
-                <td>0.028</td>
-                <td>1.00%</td>
-                <td>0.211</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-34B-Instruct-hf</td>
-                <td>34B</td>
-                <td>0.143</td>
-                <td>0.303</td>
-                <td>0.032</td>
-                <td>0.32%</td>
-                <td>0.211</td>
-              </tr>
-              <!-- <tr>
-                <td colspan="7">CoT</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-4-0613</td>
-                <td>-</td>
-                <td>0.280</td>
-                <td>0.338</td>
-                <td>0.174</td>
-                <td>0.33%</td>
-                <td>0.850</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">glm-4</td>
-                <td>-</td>
-                <td>0.228</td>
-                <td>0.218</td>
-                <td>0.072</td>
-                <td>4.09%</td>
-                <td>0.750</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-3.5-turbo-1106</td>
-                <td>-</td>
-                <td>0.265</td>
-                <td>0.113</td>
-                <td>0.142</td>
-                <td>0.28%</td>
-                <td>0.500</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-ultra</td>
-                <td>-</td>
-                <td>0.213</td>
-                <td>0.162</td>
-                <td>0.062</td>
-                <td>2.12%</td>
-                <td>0.500</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-pro</td>
-                <td>-</td>
-                <td>0.199</td>
-                <td>0.154</td>
-                <td>0.047</td>
-                <td>3.41%</td>
-                <td>0.400</td>
-              </tr> -->
-            </table>
-
-            <table id="table2" class="js-sort-table hidden">
-              <tr>
-                <td><strong>Model</strong></td>
-                <td><strong>Size</strong></td>
-                <td><strong>Debug</strong></td>
-                <td><strong>Translation</strong></td>
-                <td><strong>Switch</strong></td>
-                <td><strong>Polishment Score</strong></td>
-                <td><strong>Win Rate</strong></td>
-              </tr>
-              <tr>
-                <td colspan="7">Zero-shot</td>
-              </tr>
-
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-4-0613</td>
-                <td>-</td>
-                <td>0.493</td>
-                <td>0.503</td>
-                <td>0.264</td>
-                <td>1.33%</td>
-                <td>0.868</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">OpenCodeInterpreter-DS-33B</td>
-                <td>33B</td>
-                <td>0.429</td>
-                <td>0.428</td>
-                <td>0.141</td>
-                <td>6.49%</td>
-                <td>0.816</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-3.5-turbo-1106</td>
-                <td>-</td>
-                <td>0.494</td>
-                <td>0.480</td>
-                <td>0.177</td>
-                <td>0.84%</td>
-                <td>0.776</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">deepseek-coder-33B-instruct</td>
-                <td>33B</td>
-                <td>0.487</td>
-                <td>0.451</td>
-                <td>0.162</td>
-                <td>1.14%</td>
-                <td>0.757</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-pro</td>
-                <td>-</td>
-                <td>0.423</td>
-                <td>0.344</td>
-                <td>0.076</td>
-                <td>6.65%</td>
-                <td>0.711</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">WizardCoder-33B-V1.1</td>
-                <td>33B</td>
-                <td>0.487</td>
-                <td>0.438</td>
-                <td>0.156</td>
-                <td>0.90%</td>
-                <td>0.704</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Magicoder-S-DS-6.7B</td>
-                <td>6.7B</td>
-                <td>0.406</td>
-                <td>0.401</td>
-                <td>0.130</td>
-                <td>1.99%</td>
-                <td>0.697</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">OpenCodeInterpreter-DS-6.7B</td>
-                <td>6.7B</td>
-                <td>0.402</td>
-                <td>0.384</td>
-                <td>0.126</td>
-                <td>4.28%</td>
-                <td>0.697</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">glm-4</td>
-                <td>-</td>
-                <td>0.271</td>
-                <td>0.365</td>
-                <td>0.085</td>
-                <td>6.46%</td>
-                <td>0.592</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-ultra</td>
-                <td>-</td>
-                <td>0.459</td>
-                <td>0.278</td>
-                <td>0.041</td>
-                <td>3.77%</td>
-                <td>0.579</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Phind-CodeLlama-34B-v2</td>
-                <td>34B</td>
-                <td>0.369</td>
-                <td>0.331</td>
-                <td>0.074</td>
-                <td>1.78%</td>
-                <td>0.539</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">WizardCoder-15B-V1.0</td>
-                <td>15B</td>
-                <td>0.354</td>
-                <td>0.278</td>
-                <td>0.067</td>
-                <td>0.96%</td>
-                <td>0.408</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-13B-Instruct-hf</td>
-                <td>13B</td>
-                <td>0.368</td>
-                <td>0.275</td>
-                <td>0.021</td>
-                <td>1.82%</td>
-                <td>0.368</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Magicoder-S-CL-7B</td>
-                <td>7B</td>
-                <td>0.317</td>
-                <td>0.276</td>
-                <td>0.039</td>
-                <td>1.31%</td>
-                <td>0.342</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-34B-hf</td>
-                <td>34B</td>
-                <td>0.328</td>
-                <td>0.302</td>
-                <td>0.052</td>
-                <td>0.81%</td>
-                <td>0.329</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">octocoder</td>
-                <td>15.5B</td>
-                <td>0.145</td>
-                <td>0.223</td>
-                <td>0.030</td>
-                <td>2.70%</td>
-                <td>0.289</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-7B-Instruct-hf</td>
-                <td>7B</td>
-                <td>0.336</td>
-                <td>0.231</td>
-                <td>0.017</td>
-                <td>1.17%</td>
-                <td>0.250</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-34B-Instruct-hf</td>
-                <td>34B</td>
-                <td>0.250</td>
-                <td>0.240</td>
-                <td>0.027</td>
-                <td>0.84%</td>
-                <td>0.171</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeFuse-CodeLlama-34B</td>
-                <td>34B</td>
-                <td class="s7">0.223</td>
-                <td class="s7">0.177</td>
-                <td class="s7">0.028</td>
-                <td class="s7">0.70%</td>
-                <td class="s7">0.105</td>
-              </tr>
-              <tr>
-                <td colspan="7">Three-shot</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-4-0613</td>
-                <td>-</td>
-                <td>0.523</td>
-                <td>0.514</td>
-                <td>0.303</td>
-                <td>1.14%</td>
-                <td>0.882</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-3.5-turbo-1106</td>
-                <td>-</td>
-                <td>0.511</td>
-                <td>0.431</td>
-                <td>0.201</td>
-                <td>1.70%</td>
-                <td>0.803</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">OpenCodeInterpreter-DS-33B</td>
-                <td>33B</td>
-                <td>0.463</td>
-                <td>0.437</td>
-                <td>0.229</td>
-                <td>4.82%</td>
-                <td>0.803</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">deepseek-coder-33B-instruct</td>
-                <td>33B</td>
-                <td>0.489</td>
-                <td>0.465</td>
-                <td>0.235</td>
-                <td>0.93%</td>
-                <td>0.763</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">OpenCodeInterpreter-DS-6.7B</td>
-                <td>6.7B</td>
-                <td>0.440</td>
-                <td>0.399</td>
-                <td>0.165</td>
-                <td>8.59%</td>
-                <td>0.750</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">WizardCoder-33B-V1.1</td>
-                <td>33B</td>
-                <td>0.515</td>
-                <td>0.447</td>
-                <td>0.243</td>
-                <td>0.63%</td>
-                <td>0.711</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-pro</td>
-                <td>-</td>
-                <td>0.386</td>
-                <td>0.356</td>
-                <td>0.139</td>
-                <td>5.64%</td>
-                <td>0.645</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Magicoder-S-DS-6.7B</td>
-                <td>6.7B</td>
-                <td>0.478</td>
-                <td>0.381</td>
-                <td>0.192</td>
-                <td>0.89%</td>
-                <td>0.632</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-ultra</td>
-                <td>-</td>
-                <td>0.448</td>
-                <td>0.307</td>
-                <td>0.152</td>
-                <td>4.55%</td>
-                <td>0.632</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">glm-4</td>
-                <td>-</td>
-                <td>0.341</td>
-                <td>0.360</td>
-                <td>0.100</td>
-                <td>6.41%</td>
-                <td>0.592</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Phind-CodeLlama-34B-v2</td>
-                <td>34B</td>
-                <td>0.468</td>
-                <td>0.326</td>
-                <td>0.092</td>
-                <td>0.75%</td>
-                <td>0.461</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-34B-hf</td>
-                <td>34B</td>
-                <td>0.367</td>
-                <td>0.252</td>
-                <td>0.113</td>
-                <td>1.11%</td>
-                <td>0.447</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">Magicoder-S-CL-7B</td>
-                <td>7B</td>
-                <td>0.355</td>
-                <td>0.230</td>
-                <td>0.075</td>
-                <td>1.18%</td>
-                <td>0.382</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">WizardCoder-15B-V1.0</td>
-                <td>15B</td>
-                <td>0.332</td>
-                <td>0.224</td>
-                <td>0.099</td>
-                <td>1.11%</td>
-                <td>0.329</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-13B-Instruct-hf</td>
-                <td>13B</td>
-                <td>0.330</td>
-                <td>0.284</td>
-                <td>0.028</td>
-                <td>1.25%</td>
-                <td>0.322</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeFuse-CodeLlama-34B</td>
-                <td>34B</td>
-                <td>0.262</td>
-                <td>0.158</td>
-                <td>0.050</td>
-                <td>1.39%</td>
-                <td>0.250</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-34B-Instruct-hf</td>
-                <td>34B</td>
-                <td>0.330</td>
-                <td>0.264</td>
-                <td>0.032</td>
-                <td>0.67%</td>
-                <td>0.211</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">CodeLlama-7B-Instruct-hf</td>
-                <td>7B</td>
-                <td>0.362</td>
-                <td>0.224</td>
-                <td>0.028</td>
-                <td>0.71%</td>
-                <td>0.204</td>
-              </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-                <td style="text-align: left;">octocoder</td>
-                <td>15.5B</td>
-                <td class="s7">0.263</td>
-                <td class="s7">0.206</td>
-                <td class="s7">0.054</td>
-                <td class="s7">0.85%</td>
-                <td class="s7">0.184</td>
-              </tr>
-              <!-- <tr>
-                <td colspan="7">CoT</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-4-0613</td>
-                <td>-</td>
-                <td>0.439</td>
-                <td>0.414</td>
-                <td>0.174</td>
-                <td>1.45%</td>
-                <td>0.800</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gpt-3.5-turbo-1106</td>
-                <td>-</td>
-                <td>0.440</td>
-                <td>0.321</td>
-                <td>0.142</td>
-                <td>0.69%</td>
-                <td>0.700</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">glm-4</td>
-                <td>-</td>
-                <td>0.201</td>
-                <td>0.260</td>
-                <td>0.072</td>
-                <td>5.28%</td>
-                <td>0.600</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-ultra</td>
-                <td>-</td>
-                <td>0.364</td>
-                <td>0.217</td>
-                <td>0.062</td>
-                <td>3.21%</td>
-                <td>0.500</td>
-              </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-                <td style="text-align: left;">gemini-pro</td>
-                <td>-</td>
-                <td>0.280</td>
-                <td>0.211</td>
-                <td>0.047</td>
-                <td>4.51%</td>
-                <td>0.400</td>
-              </tr> -->
-
-
-            </table>
-
-            <p style="text-align: center;">
-              Table 1: Evaluating LLMs on CodeEditorBench.
-              All results of models are generated by greedy decoding.
-              Code Debug, Code Translate and Code Requirement Switch are evaluated with pass@1, while Code Polish is
-              evaluated with Mean OptScore.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="columns is-centered m-6">
-        <div class="column is-full has-text-centered content">
-          <h2 class="title is-3">Pass rate distribution</h2>
-          <div class="content has-text-justified">
-            <img src="static/images/pass_rate_boxplot.jpg" alt="Pass rate boxplot" style="width: 100%;">
-            <p style="text-align: center;">
-              Figure 5: Pass rate distribution of models on CodeEditorBench_Plus
-            </p>
-            <p>
-              The pass rates exhibit significant variation across different problem types, as illustrated in Table 2 and
-              Figure 5.
-              Within the PLUS dataset, Switch problems are identified as the most challenging, with a mere 11.18% pass
-              rate.
-              Debug and Translate problems have pass rates approximately around 20% and 30%.
-              For Polish problems, even with the correct original code provided, only 37.47% of the solutions meet all
-              testing criteria. Additionally, only a limited 19.23% of the dataset not only passes all tests but also
-              demonstrates superior average runtime or memory efficiency relative to the original code. It is also
-              significant to note that a notable fraction of solutions simply replicate the original code with no
-              alterations.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns is-centered m-6">
-        <div class="column is-full has-text-centered content">
-          <h2 class="title is-3">Pass rate distribution</h2>
-          <div class="content has-text-justified">
             <table>
               <tr>
-                <td></td>
-                <td>Pass</td>
-                <td>Wrong Answer</td>
-                <td>Runtime Error</td>
-                <td>Compile Error</td>
-                <td>Other</td>
+                <th rowspan="2">Metric</th>
+                <th rowspan="2">Setting / Task</th>
+                <th colspan="4">Classic</th>
+                <th colspan="4">Recent</th>
+                <th rowspan="2">Avg.</th>
               </tr>
               <tr>
-                <td>Debug</td>
-                <td>21.57%</td>
-                <td>53.41%</td>
-                <td>13.40%</td>
-                <td>7.51%</td>
-                <td>4.11%</td>
+                <th>Task 1</th>
+                <th>Task 2</th>
+                <th>Task 3</th>
+                <th>Task 4</th>
+                <th>Task 5</th>
+                <th>Task 6</th>
+                <th>Task 7</th>
+                <th>Task 8</th>
               </tr>
               <tr>
-                <td>Polish</td>
-                <td>19.23%</td>
-                <td>53.15%</td>
-                <td>5.46%</td>
-                <td>3.01%</td>
-                <td>19.15%</td>
+                <td rowspan="3">Made Submission</td>
+                <td>AutoKaggle gpt-4o</td>
+                <td><u>1</u></td>
+                <td><u>0.80</u></td>
+                <td><u>0.80</u></td>
+                <td><u>1</u></td>
+                <td>0.80</td>
+                <td><u>0.80</u></td>
+                <td><u>0.80</u></td>
+                <td><u>0.80</u></td>
+                <td><b>0.85</b></td>
               </tr>
               <tr>
-                <td>Switch</td>
-                <td>11.18%</td>
-                <td>64.74%</td>
-                <td>10.94%</td>
-                <td>8.09%</td>
-                <td>5.05%</td>
+                <td>AutoKaggle o1-mini</td>
+                <td><u>1</u></td>
+                <td>0.60</td>
+                <td>0.60</td>
+                <td><u>1</u></td>
+                <td>0.60</td>
+                <td><u>0.80</u></td>
+                <td>0.60</td>
+                <td>0.60</td>
+                <td>0.73</td>
               </tr>
               <tr>
-                <td>Translate</td>
-                <td>33.15%</td>
-                <td>45.67%</td>
-                <td>3.69%</td>
-                <td>6.06%</td>
-                <td>11.43%</td>
+                <td>AIDE gpt-4o</td>
+                <td><u>1</u></td>
+                <td>0.40</td>
+                <td>0.20</td>
+                <td>0.60</td>
+                <td><u>1</u></td>
+                <td><u>0.80</u></td>
+                <td><u>0.80</u></td>
+                <td>0</td>
+                <td>0.60</td>
+              </tr>
+              <tr><td colspan="11"><hr></td></tr>
+              <tr>
+                <td rowspan="3">Valid Submission</td>
+                <td>AutoKaggle gpt-4o</td>
+                <td><u>1</u></td>
+                <td><u>0.80</u></td>
+                <td><u>0.80</u></td>
+                <td><u>1</u></td>
+                <td><u>0.80</u></td>
+                <td>0.60</td>
+                <td><u>0.80</u></td>
+                <td><u>0.80</u></td>
+                <td><b>0.83</b></td>
               </tr>
               <tr>
-                <td>ALL</td>
-                <td>20.34%</td>
-                <td>55.26%</td>
-                <td>8.53%</td>
-                <td>6.34%</td>
-                <td>9.53%</td>
+                <td>AutoKaggle o1-mini</td>
+                <td><u>1</u></td>
+                <td>0.60</td>
+                <td>0.60</td>
+                <td><u>1</u></td>
+                <td>0.60</td>
+                <td>0.60</td>
+                <td>0.60</td>
+                <td>0.60</td>
+                <td>0.70</td>
+              </tr>
+              <tr>
+                <td>AIDE gpt-4o</td>
+                <td><u>1</u></td>
+                <td>0.40</td>
+                <td>0.20</td>
+                <td>0.40</td>
+                <td><u>1</u></td>
+                <td><u>0.80</u></td>
+                <td><u>0.80</u></td>
+                <td>0</td>
+                <td>0.58</td>
+              </tr>
+              <tr><td colspan="11"><hr></td></tr>
+              <tr>
+                <td rowspan="3">Comprehensive Score</td>
+                <td>AutoKaggle gpt-4o</td>
+                <td><u>0.888</u></td>
+                <td><u>0.786</u></td>
+                <td><u>0.831</u></td>
+                <td>0.862</td>
+                <td>0.810</td>
+                <td>0.728</td>
+                <td><u>0.848</u></td>
+                <td><u>0.812</u></td>
+                <td><b>0.821</b></td>
+              </tr>
+              <tr>
+                <td>AutoKaggle o1-mini</td>
+                <td>0.879</td>
+                <td>0.680</td>
+                <td>0.729</td>
+                <td><u>0.863</u></td>
+                <td>0.709</td>
+                <td>0.735</td>
+                <td>0.742</td>
+                <td>0.735</td>
+                <td>0.759</td>
+              </tr>
+              <tr>
+                <td>AIDE gpt-4o</td>
+                <td>0.872</td>
+                <td>0.597</td>
+                <td>0.542</td>
+                <td>0.561</td>
+                <td><u>0.918</u></td>
+                <td><u>0.793</u></td>
+                <td><u>0.848</u></td>
+                <td>0</td>
+                <td>0.641</td>
               </tr>
             </table>
             <p style="text-align: center;">
-              Table 2: Judgment results across different problem types in CodeEditorBench_Plus.
-            </p>
-            <p>
-              We analyze the aggregated solutions from all models on CodeEditorBench_Plus,
-              as detailed in Table 2,
-              and discovered that only 20.34% of solutions successfully solve the
-              problem, with a significant 55.26% failing due to incorrect answers. Other prevalent causes of failure
-              include compilation and runtime errors, while instances of timeouts or exceeding memory limits are
-              comparatively rare. Specifically, 6.34% of the dataset experiences compilation errors, a phenomenon that
-              may partly stem from post-processing losses incurred during the extraction of code blocks from solutions
-              that include textual explanations. Models producing poorly formatted output, such as OctoCoder, are
-              notably more susceptible to compilation errors. Interestingly, Polish problems demonstrate the lowest
-              frequencies of both runtime and compilation errors, likely attributable to the minimal alterations made to
-              the original code by the models. Conversely, Translate problems are characterized by a lower rate of
-              incorrect answers (45.67%) relative to other problem types, yet suffer the highest rate of timeout errors
-              (10.21%).
+              Table 1: Made submission, valid submission and comprehensive score on 8 Kaggle tasks. Each experiment is repeated with 5 trials. The best performances on individual tasks are underlined, and the best performances across all tasks are bolded.
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1 mmmu">Experiment Results</h1>
+    </div>
+  </section>
+<!-- RESULTS SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mmmu">Experiment Results</h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Main Results</h2>
+        <div class="content">
+          <table>
+            <tr>
+              <th rowspan="2">Metric</th>
+              <th rowspan="2">Setting / Task</th>
+              <th colspan="4">Classic</th>
+              <th colspan="4">Recent</th>
+              <th rowspan="2">Avg.</th>
+            </tr>
+            <tr>
+              <th>Task 1</th>
+              <th>Task 2</th>
+              <th>Task 3</th>
+              <th>Task 4</th>
+              <th>Task 5</th>
+              <th>Task 6</th>
+              <th>Task 7</th>
+              <th>Task 8</th>
+            </tr>
+            <tr>
+              <td rowspan="3">Made Submission</td>
+              <td>AutoKaggle gpt-4o</td>
+              <td><u>1</u></td>
+              <td><u>0.80</u></td>
+              <td><u>0.80</u></td>
+              <td><u>1</u></td>
+              <td>0.80</td>
+              <td><u>0.80</u></td>
+              <td><u>0.80</u></td>
+              <td><u>0.80</u></td>
+              <td><b>0.85</b></td>
+            </tr>
+            <tr>
+              <td>AutoKaggle o1-mini</td>
+              <td><u>1</u></td>
+              <td>0.60</td>
+              <td>0.60</td>
+              <td><u>1</u></td>
+              <td>0.60</td>
+              <td><u>0.80</u></td>
+              <td>0.60</td>
+              <td>0.60</td>
+              <td>0.73</td>
+            </tr>
+            <tr>
+              <td>AIDE gpt-4o</td>
+              <td><u>1</u></td>
+              <td>0.40</td>
+              <td>0.20</td>
+              <td>0.60</td>
+              <td><u>1</u></td>
+              <td><u>0.80</u></td>
+              <td><u>0.80</u></td>
+              <td>0</td>
+              <td>0.60</td>
+            </tr>
+            <tr><td colspan="11"><hr></td></tr>
+            <tr>
+              <td rowspan="3">Valid Submission</td>
+              <td>AutoKaggle gpt-4o</td>
+              <td><u>1</u></td>
+              <td><u>0.80</u></td>
+              <td><u>0.80</u></td>
+              <td><u>1</u></td>
+              <td><u>0.80</u></td>
+              <td>0.60</td>
+              <td><u>0.80</u></td>
+              <td><u>0.80</u></td>
+              <td><b>0.83</b></td>
+            </tr>
+            <tr>
+              <td>AutoKaggle o1-mini</td>
+              <td><u>1</u></td>
+              <td>0.60</td>
+              <td>0.60</td>
+              <td><u>1</u></td>
+              <td>0.60</td>
+              <td>0.60</td>
+              <td>0.60</td>
+              <td>0.60</td>
+              <td>0.70</td>
+            </tr>
+            <tr>
+              <td>AIDE gpt-4o</td>
+              <td><u>1</u></td>
+              <td>0.40</td>
+              <td>0.20</td>
+              <td>0.40</td>
+              <td><u>1</u></td>
+              <td><u>0.80</u></td>
+              <td><u>0.80</u></td>
+              <td>0</td>
+              <td>0.58</td>
+            </tr>
+            <tr><td colspan="11"><hr></td></tr>
+            <tr>
+              <td rowspan="3">Comprehensive Score</td>
+              <td>AutoKaggle gpt-4o</td>
+              <td><u>0.888</u></td>
+              <td><u>0.786</u></td>
+              <td><u>0.831</u></td>
+              <td>0.862</td>
+              <td>0.810</td>
+              <td>0.728</td>
+              <td><u>0.848</u></td>
+              <td><u>0.812</u></td>
+              <td><b>0.821</b></td>
+            </tr>
+            <tr>
+              <td>AutoKaggle o1-mini</td>
+              <td>0.879</td>
+              <td>0.680</td>
+              <td>0.729</td>
+              <td><u>0.863</u></td>
+              <td>0.709</td>
+              <td>0.735</td>
+              <td>0.742</td>
+              <td>0.735</td>
+              <td>0.759</td>
+            </tr>
+            <tr>
+              <td>AIDE gpt-4o</td>
+              <td>0.872</td>
+              <td>0.597</td>
+              <td>0.542</td>
+              <td>0.561</td>
+              <td><u>0.918</u></td>
+              <td><u>0.793</u></td>
+              <td><u>0.848</u></td>
+              <td>0</td>
+              <td>0.641</td>
+            </tr>
+          </table>
+          <p style="text-align: center;">
+            Table 1: Made submission, valid submission and comprehensive score on 8 Kaggle tasks. Each experiment is repeated with 5 trials. The best performances on individual tasks are underlined, and the best performances across all tasks are bolded.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
   <!-- @PAN TODO: bibtex -->
@@ -1254,7 +614,7 @@
 
   </footer>
 
-  <script>
+  <!-- <script>
     function changeButtonText() {
       var button = document.getElementById('toggleButton');
       if (button.innerHTML.includes("CodeEditorBench_Plus")) {
@@ -2528,7 +1888,7 @@
       });
     });
 
-  </script>
+  </script> -->
 
   <style>
     .hidden {
