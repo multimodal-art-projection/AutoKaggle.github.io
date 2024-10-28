@@ -281,58 +281,67 @@
             <div class="box has-background-info-light" style="border: 2px solid #3298dc; padding: 1.5rem; margin-top: 1.5rem;">
               <h3 class="title is-4 has-text-info-dark">Markdown-formatted tool schema for FillMissingValues</h3>
               
-              <div class="content has-text-left">
-                <p><strong>Description:</strong> Fill missing values in specified columns of a DataFrame. This tool can handle both numerical and categorical features by using different filling methods.</p>
+              <div class="columns">
+                <!-- Left Column -->
+                <div class="column is-half content has-text-left">
+                  <p><strong>Description:</strong> Fill missing values in specified columns of a DataFrame. This tool can handle both numerical and categorical features by using different filling methods.</p>
+                  
+                  <p><strong>Applicable Situations:</strong> Handle missing values in various types of features.</p>
+                  
+                  <p><strong>Parameters:</strong></p>
+                  <ul>
+                    <li>
+                      <strong><code>data</code>:</strong>
+                      <ul>
+                        <li><strong>Type:</strong> <code>pd.DataFrame</code></li>
+                        <li><strong>Description:</strong> A pandas DataFrame object representing the dataset.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong><code>columns</code>:</strong>
+                      <ul>
+                        <li><strong>Type:</strong> <code>string | array</code></li>
+                        <li><strong>Description:</strong> The name(s) of the column(s) where missing values should be filled.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
                 
-                <p><strong>Applicable Situations:</strong> Handle missing values in various types of features.</p>
-                
-                <p><strong>Parameters:</strong></p>
-                <ul>
-                  <li>
-                    <strong><code>data</code>:</strong>
-                    <ul>
-                      <li><strong>Type:</strong> <code>pd.DataFrame</code></li>
-                      <li><strong>Description:</strong> A pandas DataFrame object representing the dataset.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong><code>columns</code>:</strong>
-                    <ul>
-                      <li><strong>Type:</strong> <code>string | array</code></li>
-                      <li><strong>Description:</strong> The name(s) of the column(s) where missing values should be filled.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong><code>method</code>:</strong>
-                    <ul>
-                      <li><strong>Type:</strong> <code>string</code></li>
-                      <li><strong>Description:</strong> The method to use for filling missing values.</li>
-                      <li><strong>Enum:</strong> <code>auto | mean | median | mode | constant</code></li>
-                      <li><strong>Default:</strong> <code>auto</code></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong><code>fill_value</code>:</strong>
-                    <ul>
-                      <li><strong>Type:</strong> <code>number | string | null</code></li>
-                      <li><strong>Description:</strong> The value to use when method is <code>constant</code>.</li>
-                      <li><strong>Default:</strong> <code>None</code></li>
-                    </ul>
-                  </li>
-                </ul>
-                
-                <p><strong>Required:</strong> <code>data</code>, <code>columns</code></p>
-                
-                <p><strong>Result:</strong> Successfully fill missing values in the specified column(s) of data.</p>
-                
-                <p><strong>Notes:</strong></p>
-                <ul>
-                  <li>The <code>auto</code> method uses mean for numeric columns and mode for non-numeric columns.</li>
-                  <li>Using <code>mean</code> or <code>median</code> on non-numeric columns will raise an error.</li>
-                  <li>The <code>mode</code> method uses the most frequent value, which may not always be appropriate.</li>
-                  <li>Filling missing values can introduce bias, especially if the data is not missing completely at random.</li>
-                  <li>Consider the impact of filling missing values on your analysis and model performance.</li>
-                </ul>
+                <!-- Right Column -->
+                <div class="column is-half content has-text-left">
+                  <ul>
+                    <li>
+                      <strong><code>method</code>:</strong>
+                      <ul>
+                        <li><strong>Type:</strong> <code>string</code></li>
+                        <li><strong>Description:</strong> The method to use for filling missing values.</li>
+                        <li><strong>Enum:</strong> <code>auto | mean | median | mode | constant</code></li>
+                        <li><strong>Default:</strong> <code>auto</code></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong><code>fill_value</code>:</strong>
+                      <ul>
+                        <li><strong>Type:</strong> <code>number | string | null</code></li>
+                        <li><strong>Description:</strong> The value to use when method is <code>constant</code>.</li>
+                        <li><strong>Default:</strong> <code>None</code></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  
+                  <p><strong>Required:</strong> <code>data</code>, <code>columns</code></p>
+                  
+                  <p><strong>Result:</strong> Successfully fill missing values in the specified column(s) of data.</p>
+                  
+                  <p><strong>Notes:</strong></p>
+                  <ul>
+                    <li>The <code>auto</code> method uses mean for numeric columns and mode for non-numeric columns.</li>
+                    <li>Using <code>mean</code> or <code>median</code> on non-numeric columns will raise an error.</li>
+                    <li>The <code>mode</code> method uses the most frequent value, which may not always be appropriate.</li>
+                    <li>Filling missing values can introduce bias, especially if the data is not missing completely at random.</li>
+                    <li>Consider the impact of filling missing values on your analysis and model performance.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
