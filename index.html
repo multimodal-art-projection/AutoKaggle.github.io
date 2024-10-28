@@ -506,32 +506,34 @@
     </div>
   </div>
 
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <div class="content has-text-justified">
-        <p>
-          <strong>Made submission and Valid submission.</strong>
-          We first evaluated the success rate of valid submission.csv file generation across different experimental configurations. 
-          The AutoKaggle framework, implemented with GPT-4o, demonstrated superior performance with an average valid submission rate of 83% across all 8 Kaggle tasks, surpassing the AIDE framework by 28%. 
-          These results underscore the robustness of our framework in executing comprehensive data science workflows. 
-          While the AIDE framework successfully processed Tasks 1-7, which involved single-variable classification or regression on tabular data, it failed to generate valid submissions for Task 8, a multi-variable classification problem. 
-          This differential performance demonstrates our framework's versatility in handling diverse tabular data tasks.
-        </p>
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            <strong>Made submission and Valid submission.</strong>
+            We first evaluated the success rate of valid submission.csv file generation across different experimental configurations. 
+            The AutoKaggle framework, implemented with GPT-4o, demonstrated superior performance with an average valid submission rate of 83% across all 8 Kaggle tasks, surpassing the AIDE framework by 28%. 
+            These results underscore the robustness of our framework in executing comprehensive data science workflows. 
+            While the AIDE framework successfully processed Tasks 1-7, which involved single-variable classification or regression on tabular data, it failed to generate valid submissions for Task 8, a multi-variable classification problem. 
+            This differential performance demonstrates our framework's versatility in handling diverse tabular data tasks.
+          </p>
 
-        <p>
-          Another interesting observation is that within the AutoKaggle framework, the GPT-4o model achieved better results than the o1-mini model, despite the latter's purported superior reasoning capabilities. 
-          This performance difference emerged solely from varying the model used in the Planner component. 
-          We hypothesize that this counterintuitive result stems from o1-mini's tendency toward excessive planning complexity, which proves disadvantageous in our streamlined, phase-based workflow architecture. 
-          This same consideration influenced our decision to maintain GPT-4o as the Developer's base model, as our experiments indicated that an o1-mini-based Developer would significantly increase code verbosity, expanding 100-line solutions to approximately 500 lines through the introduction of superfluous components such as logging systems.
-        </p>
+          <p>
+            Another interesting observation is that within the AutoKaggle framework, the GPT-4o model achieved better results than the o1-mini model, despite the latter's purported superior reasoning capabilities. 
+            This performance difference emerged solely from varying the model used in the Planner component. 
+            We hypothesize that this counterintuitive result stems from o1-mini's tendency toward excessive planning complexity, which proves disadvantageous in our streamlined, phase-based workflow architecture. 
+            This same consideration influenced our decision to maintain GPT-4o as the Developer's base model, as our experiments indicated that an o1-mini-based Developer would significantly increase code verbosity, expanding 100-line solutions to approximately 500 lines through the introduction of superfluous components such as logging systems.
+          </p>
 
-        <p>
-          <strong>Comprehensive Score.</strong>
-          Subsequently, we compared the overall performance of different settings across 8 Kaggle tasks. 
-          AutoKaggle with GPT-4o achieved the highest comprehensive score in 5 tasks and demonstrated the best overall performance. 
-          As shown in the figure above, the comparison of different settings based on the average normalized performance score metric shows that AutoKaggle with o1-mini achieved the highest overall score. 
-          This indicates that although the o1-mini-based Planner generated overly complex plans that increased development difficulty, successfully executing these plans according to specifications led to superior performance outcomes.
-        </p>
+          <p>
+            <strong>Comprehensive Score.</strong>
+            Subsequently, we compared the overall performance of different settings across 8 Kaggle tasks. 
+            AutoKaggle with GPT-4o achieved the highest comprehensive score in 5 tasks and demonstrated the best overall performance. 
+            As shown in the figure above, the comparison of different settings based on the average normalized performance score metric shows that AutoKaggle with o1-mini achieved the highest overall score. 
+            This indicates that although the o1-mini-based Planner generated overly complex plans that increased development difficulty, successfully executing these plans according to specifications led to superior performance outcomes.
+          </p>
+        </div>
       </div>
     </div>
   </div>
