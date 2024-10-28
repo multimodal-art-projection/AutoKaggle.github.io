@@ -272,432 +272,156 @@
     </div>
   </section>
   <section class="section">
-    <div class="container">
-      <div class="columns is-centered m-6">
-        <div class="column is-full has-text-centered content">
-          <h2 class="title is-3">Main Results</h2>
-          <div class="content">
-            <table>
-              <tr>
-                <th rowspan="2">Metric</th>
-                <th rowspan="2">Setting / Task</th>
-                <th colspan="4">Classic</th>
-                <th colspan="4">Recent</th>
-                <th rowspan="2">Avg.</th>
-              </tr>
-              <tr>
-                <th>Task 1</th>
-                <th>Task 2</th>
-                <th>Task 3</th>
-                <th>Task 4</th>
-                <th>Task 5</th>
-                <th>Task 6</th>
-                <th>Task 7</th>
-                <th>Task 8</th>
-              </tr>
-              <tr>
-                <td rowspan="3">Made Submission</td>
-                <td>AutoKaggle gpt-4o</td>
-                <td><u>1</u></td>
-                <td><u>0.80</u></td>
-                <td><u>0.80</u></td>
-                <td><u>1</u></td>
-                <td>0.80</td>
-                <td><u>0.80</u></td>
-                <td><u>0.80</u></td>
-                <td><u>0.80</u></td>
-                <td><b>0.85</b></td>
-              </tr>
-              <tr>
-                <td>AutoKaggle o1-mini</td>
-                <td><u>1</u></td>
-                <td>0.60</td>
-                <td>0.60</td>
-                <td><u>1</u></td>
-                <td>0.60</td>
-                <td><u>0.80</u></td>
-                <td>0.60</td>
-                <td>0.60</td>
-                <td>0.73</td>
-              </tr>
-              <tr>
-                <td>AIDE gpt-4o</td>
-                <td><u>1</u></td>
-                <td>0.40</td>
-                <td>0.20</td>
-                <td>0.60</td>
-                <td><u>1</u></td>
-                <td><u>0.80</u></td>
-                <td><u>0.80</u></td>
-                <td>0</td>
-                <td>0.60</td>
-              </tr>
-              <tr><td colspan="11"><hr></td></tr>
-              <tr>
-                <td rowspan="3">Valid Submission</td>
-                <td>AutoKaggle gpt-4o</td>
-                <td><u>1</u></td>
-                <td><u>0.80</u></td>
-                <td><u>0.80</u></td>
-                <td><u>1</u></td>
-                <td><u>0.80</u></td>
-                <td>0.60</td>
-                <td><u>0.80</u></td>
-                <td><u>0.80</u></td>
-                <td><b>0.83</b></td>
-              </tr>
-              <tr>
-                <td>AutoKaggle o1-mini</td>
-                <td><u>1</u></td>
-                <td>0.60</td>
-                <td>0.60</td>
-                <td><u>1</u></td>
-                <td>0.60</td>
-                <td>0.60</td>
-                <td>0.60</td>
-                <td>0.60</td>
-                <td>0.70</td>
-              </tr>
-              <tr>
-                <td>AIDE gpt-4o</td>
-                <td><u>1</u></td>
-                <td>0.40</td>
-                <td>0.20</td>
-                <td>0.40</td>
-                <td><u>1</u></td>
-                <td><u>0.80</u></td>
-                <td><u>0.80</u></td>
-                <td>0</td>
-                <td>0.58</td>
-              </tr>
-              <tr><td colspan="11"><hr></td></tr>
-              <tr>
-                <td rowspan="3">Comprehensive Score</td>
-                <td>AutoKaggle gpt-4o</td>
-                <td><u>0.888</u></td>
-                <td><u>0.786</u></td>
-                <td><u>0.831</u></td>
-                <td>0.862</td>
-                <td>0.810</td>
-                <td>0.728</td>
-                <td><u>0.848</u></td>
-                <td><u>0.812</u></td>
-                <td><b>0.821</b></td>
-              </tr>
-              <tr>
-                <td>AutoKaggle o1-mini</td>
-                <td>0.879</td>
-                <td>0.680</td>
-                <td>0.729</td>
-                <td><u>0.863</u></td>
-                <td>0.709</td>
-                <td>0.735</td>
-                <td>0.742</td>
-                <td>0.735</td>
-                <td>0.759</td>
-              </tr>
-              <tr>
-                <td>AIDE gpt-4o</td>
-                <td>0.872</td>
-                <td>0.597</td>
-                <td>0.542</td>
-                <td>0.561</td>
-                <td><u>0.918</u></td>
-                <td><u>0.793</u></td>
-                <td><u>0.848</u></td>
-                <td>0</td>
-                <td>0.641</td>
-              </tr>
-            </table>
-            <p style="text-align: center;">
-              Table 1: Made submission, valid submission and comprehensive score on 8 Kaggle tasks. Each experiment is repeated with 5 trials. The best performances on individual tasks are underlined, and the best performances across all tasks are bolded.
-            </p>
-          </div>
-        </div>
+    <div class="results-container">
+      <div class="hero">
+        <h1 class="main-title">Experiment Results</h1>
+      </div>
+      <h2 class="title">Main Results</h2>
+      <table>
+        <tr>
+          <th rowspan="2">Metric</th>
+          <th rowspan="2">Setting / Task</th>
+          <th colspan="4" class="classic-header">Classic</th>
+          <th colspan="4" class="recent-header">Recent</th>
+          <th rowspan="2">Avg.</th>
+        </tr>
+        <tr>
+          <th>Task 1</th>
+          <th>Task 2</th>
+          <th>Task 3</th>
+          <th>Task 4</th>
+          <th>Task 5</th>
+          <th>Task 6</th>
+          <th>Task 7</th>
+          <th>Task 8</th>
+        </tr>
+        <tr>
+          <td rowspan="3">Made Submission</td>
+          <td>AutoKaggle gpt-4o</td>
+          <td class="underline">1</td>
+          <td class="underline">0.80</td>
+          <td class="underline">0.80</td>
+          <td class="underline">1</td>
+          <td>0.80</td>
+          <td class="underline">0.80</td>
+          <td class="underline">0.80</td>
+          <td class="underline">0.80</td>
+          <td class="bold">0.85</td>
+        </tr>
+        <tr>
+          <td>AutoKaggle o1-mini</td>
+          <td class="underline">1</td>
+          <td>0.60</td>
+          <td>0.60</td>
+          <td class="underline">1</td>
+          <td>0.60</td>
+          <td class="underline">0.80</td>
+          <td>0.60</td>
+          <td>0.60</td>
+          <td>0.73</td>
+        </tr>
+        <tr>
+          <td>AIDE gpt-4o</td>
+          <td class="underline">1</td>
+          <td>0.40</td>
+          <td>0.20</td>
+          <td>0.60</td>
+          <td class="underline">1</td>
+          <td class="underline">0.80</td>
+          <td class="underline">0.80</td>
+          <td>0</td>
+          <td>0.60</td>
+        </tr>
+        <tr class="separator">
+          <td colspan="11"></td>
+        </tr>
+        <tr>
+          <td rowspan="3">Valid Submission</td>
+          <td>AutoKaggle gpt-4o</td>
+          <td class="underline">1</td>
+          <td class="underline">0.80</td>
+          <td class="underline">0.80</td>
+          <td class="underline">1</td>
+          <td class="underline">0.80</td>
+          <td>0.60</td>
+          <td class="underline">0.80</td>
+          <td class="underline">0.80</td>
+          <td class="bold">0.83</td>
+        </tr>
+        <tr>
+          <td>AutoKaggle o1-mini</td>
+          <td class="underline">1</td>
+          <td>0.60</td>
+          <td>0.60</td>
+          <td class="underline">1</td>
+          <td>0.60</td>
+          <td>0.60</td>
+          <td>0.60</td>
+          <td>0.60</td>
+          <td>0.70</td>
+        </tr>
+        <tr>
+          <td>AIDE gpt-4o</td>
+          <td class="underline">1</td>
+          <td>0.40</td>
+          <td>0.20</td>
+          <td>0.40</td>
+          <td class="underline">1</td>
+          <td class="underline">0.80</td>
+          <td class="underline">0.80</td>
+          <td>0</td>
+          <td>0.58</td>
+        </tr>
+        <tr class="separator">
+          <td colspan="11"></td>
+        </tr>
+        <tr>
+          <td rowspan="3">Comprehensive Score</td>
+          <td>AutoKaggle gpt-4o</td>
+          <td class="underline">0.888</td>
+          <td class="underline">0.786</td>
+          <td class="underline">0.831</td>
+          <td>0.862</td>
+          <td>0.810</td>
+          <td>0.728</td>
+          <td class="underline">0.848</td>
+          <td class="underline">0.812</td>
+          <td class="bold">0.821</td>
+        </tr>
+        <tr>
+          <td>AutoKaggle o1-mini</td>
+          <td>0.879</td>
+          <td>0.680</td>
+          <td>0.729</td>
+          <td class="underline">0.863</td>
+          <td>0.709</td>
+          <td>0.735</td>
+          <td>0.742</td>
+          <td>0.735</td>
+          <td>0.759</td>
+        </tr>
+        <tr>
+          <td>AIDE gpt-4o</td>
+          <td>0.872</td>
+          <td>0.597</td>
+          <td>0.542</td>
+          <td>0.561</td>
+          <td class="underline">0.918</td>
+          <td class="underline">0.793</td>
+          <td class="underline">0.848</td>
+          <td>0</td>
+          <td>0.641</td>
+        </tr>
+      </table>
+      <div class="caption">
+        Table 1: Made submission, valid submission and comprehensive score on 8 Kaggle tasks. 
+        Each experiment is repeated with 5 trials. The best performances on individual tasks 
+        are highlighted in light blue, and the best performances across all tasks are highlighted 
+        in darker blue.
       </div>
     </div>
   </section>
 
-  <section class="hero is-light is-small">
-    <div class="hero-body has-text-centered">
-      <h1 class="title is-1 mmmu">Experiment Results</h1>
-    </div>
-  </section>
-<!-- RESULTS SECTION -->
-<section class="hero is-light is-small">
-  <div class="hero-body has-text-centered">
-    <h1 class="title is-1 mmmu">Experiment Results</h1>
-  </div>
-</section>
-<!-- <section class="section">
-  <div class="container">
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Main Results</h2>
-        <div class="content">
-          <table>
-            <tr>
-              <th rowspan="2">Metric</th>
-              <th rowspan="2">Setting / Task</th>
-              <th colspan="4">Classic</th>
-              <th colspan="4">Recent</th>
-              <th rowspan="2">Avg.</th>
-            </tr>
-            <tr>
-              <th>Task 1</th>
-              <th>Task 2</th>
-              <th>Task 3</th>
-              <th>Task 4</th>
-              <th>Task 5</th>
-              <th>Task 6</th>
-              <th>Task 7</th>
-              <th>Task 8</th>
-            </tr>
-            <tr>
-              <td rowspan="3">Made Submission</td>
-              <td>AutoKaggle gpt-4o</td>
-              <td><u>1</u></td>
-              <td><u>0.80</u></td>
-              <td><u>0.80</u></td>
-              <td><u>1</u></td>
-              <td>0.80</td>
-              <td><u>0.80</u></td>
-              <td><u>0.80</u></td>
-              <td><u>0.80</u></td>
-              <td><b>0.85</b></td>
-            </tr>
-            <tr>
-              <td>AutoKaggle o1-mini</td>
-              <td><u>1</u></td>
-              <td>0.60</td>
-              <td>0.60</td>
-              <td><u>1</u></td>
-              <td>0.60</td>
-              <td><u>0.80</u></td>
-              <td>0.60</td>
-              <td>0.60</td>
-              <td>0.73</td>
-            </tr>
-            <tr>
-              <td>AIDE gpt-4o</td>
-              <td><u>1</u></td>
-              <td>0.40</td>
-              <td>0.20</td>
-              <td>0.60</td>
-              <td><u>1</u></td>
-              <td><u>0.80</u></td>
-              <td><u>0.80</u></td>
-              <td>0</td>
-              <td>0.60</td>
-            </tr>
-            <tr><td colspan="11"><hr></td></tr>
-            <tr>
-              <td rowspan="3">Valid Submission</td>
-              <td>AutoKaggle gpt-4o</td>
-              <td><u>1</u></td>
-              <td><u>0.80</u></td>
-              <td><u>0.80</u></td>
-              <td><u>1</u></td>
-              <td><u>0.80</u></td>
-              <td>0.60</td>
-              <td><u>0.80</u></td>
-              <td><u>0.80</u></td>
-              <td><b>0.83</b></td>
-            </tr>
-            <tr>
-              <td>AutoKaggle o1-mini</td>
-              <td><u>1</u></td>
-              <td>0.60</td>
-              <td>0.60</td>
-              <td><u>1</u></td>
-              <td>0.60</td>
-              <td>0.60</td>
-              <td>0.60</td>
-              <td>0.60</td>
-              <td>0.70</td>
-            </tr>
-            <tr>
-              <td>AIDE gpt-4o</td>
-              <td><u>1</u></td>
-              <td>0.40</td>
-              <td>0.20</td>
-              <td>0.40</td>
-              <td><u>1</u></td>
-              <td><u>0.80</u></td>
-              <td><u>0.80</u></td>
-              <td>0</td>
-              <td>0.58</td>
-            </tr>
-            <tr><td colspan="11"><hr></td></tr>
-            <tr>
-              <td rowspan="3">Comprehensive Score</td>
-              <td>AutoKaggle gpt-4o</td>
-              <td><u>0.888</u></td>
-              <td><u>0.786</u></td>
-              <td><u>0.831</u></td>
-              <td>0.862</td>
-              <td>0.810</td>
-              <td>0.728</td>
-              <td><u>0.848</u></td>
-              <td><u>0.812</u></td>
-              <td><b>0.821</b></td>
-            </tr>
-            <tr>
-              <td>AutoKaggle o1-mini</td>
-              <td>0.879</td>
-              <td>0.680</td>
-              <td>0.729</td>
-              <td><u>0.863</u></td>
-              <td>0.709</td>
-              <td>0.735</td>
-              <td>0.742</td>
-              <td>0.735</td>
-              <td>0.759</td>
-            </tr>
-            <tr>
-              <td>AIDE gpt-4o</td>
-              <td>0.872</td>
-              <td>0.597</td>
-              <td>0.542</td>
-              <td>0.561</td>
-              <td><u>0.918</u></td>
-              <td><u>0.793</u></td>
-              <td><u>0.848</u></td>
-              <td>0</td>
-              <td>0.641</td>
-            </tr>
-          </table>
-          <p style="text-align: center;">
-            Table 1: Made submission, valid submission and comprehensive score on 8 Kaggle tasks. Each experiment is repeated with 5 trials. The best performances on individual tasks are underlined, and the best performances across all tasks are bolded.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-
-const ResultsTable = () => {
-  // 将每个指标的最佳值高亮显示的辅助函数
-  const getBestStyle = (value, isUnderlined, isBold) => {
-    const baseClass = "p-3 text-center transition-colors";
-    if (isBold) {
-      return `${baseClass} font-bold text-blue-700 bg-blue-50`;
-    }
-    if (isUnderlined) {
-      return `${baseClass} font-semibold text-blue-600 bg-blue-50/50`;
-    }
-    return baseClass;
-  };
-
-  return (
-    <Card className="w-full max-w-7xl mx-auto shadow-lg">
-      <CardHeader className="text-center bg-gradient-to-r from-blue-50 to-blue-100">
-        <CardTitle className="text-2xl font-bold text-gray-800">Main Results</CardTitle>
-      </CardHeader>
-      <CardContent className="p-6">
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr>
-                <th className="p-3 bg-gray-100 border" rowSpan="2">Metric</th>
-                <th className="p-3 bg-gray-100 border" rowSpan="2">Setting / Task</th>
-                <th className="p-3 bg-gray-800 text-white border text-center" colSpan="4">Classic</th>
-                <th className="p-3 bg-gray-700 text-white border text-center" colSpan="4">Recent</th>
-                <th className="p-3 bg-gray-100 border" rowSpan="2">Avg.</th>
-              </tr>
-              <tr>
-                {[...Array(8)].map((_, i) => (
-                  <th key={i} className="p-3 bg-gray-200 border text-center">
-                    Task {i + 1}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {/* Made Submission Section */}
-              <tr>
-                <td className="p-3 bg-blue-900 text-white font-bold border" rowSpan="3">Made Submission</td>
-                <td className="p-3 border font-medium">AutoKaggle gpt-4o</td>
-                <td className={getBestStyle(1, true)}>1</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(1, true)}>1</td>
-                <td className={getBestStyle(0.80, false)}>0.80</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(0.85, false, true)}>0.85</td>
-              </tr>
-              {/* Additional rows omitted for brevity but would follow same pattern */}
-              <tr>
-                <td className="p-3 border font-medium">AutoKaggle o1-mini</td>
-                <td className={getBestStyle(1, true)}>1</td>
-                <td className={getBestStyle(0.60, false)}>0.60</td>
-                <td className={getBestStyle(0.60, false)}>0.60</td>
-                <td className={getBestStyle(1, true)}>1</td>
-                <td className={getBestStyle(0.60, false)}>0.60</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(0.60, false)}>0.60</td>
-                <td className={getBestStyle(0.60, false)}>0.60</td>
-                <td className="p-3 text-center">0.73</td>
-              </tr>
-
-              {/* Section Divider */}
-              <tr className="border-b-4 border-gray-200">
-                <td colSpan="11" className="p-2 bg-gray-50"></td>
-              </tr>
-
-              {/* Valid Submission Section */}
-              <tr>
-                <td className="p-3 bg-blue-800 text-white font-bold border" rowSpan="3">Valid Submission</td>
-                <td className="p-3 border font-medium">AutoKaggle gpt-4o</td>
-                <td className={getBestStyle(1, true)}>1</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(1, true)}>1</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(0.60, false)}>0.60</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(0.80, true)}>0.80</td>
-                <td className={getBestStyle(0.83, false, true)}>0.83</td>
-              </tr>
-
-              {/* Comprehensive Score Section Header */}
-              <tr className="border-b-4 border-gray-200">
-                <td colSpan="11" className="p-2 bg-gray-50"></td>
-              </tr>
-              <tr>
-                <td className="p-3 bg-blue-700 text-white font-bold border" rowSpan="3">Comprehensive Score</td>
-                <td className="p-3 border font-medium">AutoKaggle gpt-4o</td>
-                <td className={getBestStyle(0.888, true)}>0.888</td>
-                <td className={getBestStyle(0.786, true)}>0.786</td>
-                <td className={getBestStyle(0.831, true)}>0.831</td>
-                <td className={getBestStyle(0.862, false)}>0.862</td>
-                <td className={getBestStyle(0.810, false)}>0.810</td>
-                <td className={getBestStyle(0.728, false)}>0.728</td>
-                <td className={getBestStyle(0.848, true)}>0.848</td>
-                <td className={getBestStyle(0.812, true)}>0.812</td>
-                <td className={getBestStyle(0.821, false, true)}>0.821</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div className="mt-6 text-center text-sm text-gray-600">
-            Table 1: Made submission, valid submission and comprehensive score on 8 Kaggle tasks. 
-            Each experiment is repeated with 5 trials. The best performances on individual tasks 
-            are highlighted in light blue, and the best performances across all tasks are highlighted 
-            in darker blue.
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
-
-export default ResultsTable;
 
   <!-- @PAN TODO: bibtex -->
   <section class="section" id="BibTeX">
@@ -735,1282 +459,6 @@ export default ResultsTable;
     <!-- </div> -->
 
   </footer>
-
-  <!-- <script>
-    function changeButtonText() {
-      var button = document.getElementById('toggleButton');
-      if (button.innerHTML.includes("CodeEditorBench_Plus")) {
-        button.innerHTML = "<b style='font-size: larger;'>CodeEditorBench_Primary</b> (Click to Switch)";
-      } else {
-        button.innerHTML = "<b style='font-size: larger;'>CodeEditorBench_Plus</b> (Click to Switch)";
-      }
-    }
-    document.addEventListener('DOMContentLoaded', function () {
-      var tables = document.querySelectorAll('table');
-
-      tables.forEach(function (table) {
-        if (!table) return;
-
-        var initialRows = Array.from(table.rows).slice(1);
-        table.addEventListener('click', function (event) {
-          var clickedCell = event.target.closest('td, th');
-          if (!clickedCell) return;
-          var headerRow = clickedCell.parentNode;
-          var columnIndex = Array.from(headerRow.cells).indexOf(clickedCell);
-          var type = clickedCell.getAttribute('data-type');
-
-          if (headerRow.rowIndex === 0) {
-            if (columnIndex === 0) {
-              table.tBodies[0].innerHTML = '';
-              initialRows.forEach(row => table.tBodies[0].appendChild(row.cloneNode(true)));
-            }
-          }
-        });
-      });
-    });
-
-    function sortTable(table, column, type, asc) {
-      var tbody = table.tBodies[0];
-      var rows = Array.from(tbody.rows);
-
-      rows.sort(function (a, b) {
-        var valA = a.cells[column].textContent;
-        var valB = b.cells[column].textContent;
-
-        if (type === 'number') {
-          valA = parseFloat(valA);
-          valB = parseFloat(valB);
-        }
-
-        return asc ? valA - valB : valB - valA;
-      });
-
-      rows.forEach(row => tbody.appendChild(row));
-    }
-
-    // 切换表格的函数
-    function toggleTables() {
-      var table1 = document.getElementById('table1');
-      var table2 = document.getElementById('table2');
-      table1.classList.toggle('hidden');
-      table2.classList.toggle('hidden');
-    }
-
-    document.getElementById('toggleButton').addEventListener('click', toggleTables);
-    const canvas = document.getElementById('difficulty_level_chart');
-    canvas.style.width = '500px';
-    canvas.style.height = '120px';
-    const ctx = document.getElementById('difficulty_level_chart').getContext('2d');
-    const difficulty_level_chart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Easy', 'Medium', 'Hard', 'Overall'],
-        datasets: [{
-          label: 'Fuyu-8B',
-          data: [28.9, 27, 26.4, 27.4],
-          backgroundColor: 'rgba(196, 123, 160, 0.6)',
-          borderColor: 'rgba(196, 123, 160, 1)',
-          borderWidth: 1,
-          hoverBackgroundColor: 'rgba(196, 123, 160, 1)'
-        },
-        {
-          label: 'Qwen-VL-7B',
-          data: [39.4, 31.9, 27.6, 32.9],
-          backgroundColor: 'rgba(245, 123, 113, 0.6)',
-          borderColor: 'rgba(245, 123, 113, 1)',
-          borderWidth: 1,
-          hoverBackgroundColor: 'rgba(245, 123, 113, 1)'
-        },
-        {
-          label: 'LLaVA-1.5-13B',
-          data: [41.3, 32.7, 26.7, 33.6],
-          backgroundColor: 'rgba(255, 208, 80, 0.6)',
-          borderColor: 'rgba(255, 208, 80, 1)',
-          borderWidth: 1,
-          hoverBackgroundColor: 'rgba(255, 208, 80, 1)'
-        },
-        {
-          label: 'InstructBLIP-T5-XXL',
-          data: [40.3, 32.3, 29.4, 33.8],
-          backgroundColor: 'rgba(110, 194, 134, 0.6)',
-          borderColor: 'rgba(110, 194, 134, 1)',
-          borderWidth: 1,
-          hoverBackgroundColor: 'rgba(110, 194, 134, 1)'
-        },
-        {
-          label: 'BLIP-2 FLAN-T5-XXL',
-          data: [41, 32.7, 28.5, 34],
-          backgroundColor: 'rgba(255, 153, 78, 0.6)',
-          borderColor: 'rgba(255, 153, 78, 1)',
-          borderWidth: 1,
-          hoverBackgroundColor: 'rgba(255, 153, 78, 1)'
-        },
-        {
-          label: 'GPT-4V',
-          data: [76.1, 55.6, 31.2, 55.7],
-          backgroundColor: 'rgba(117, 209, 215, 0.6)',
-          borderColor: 'rgba(117, 209, 215, 1)',
-          borderWidth: 1,
-          hoverBackgroundColor: 'rgba(117, 209, 215, 1)'
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,
-            max: 100,
-            ticks: {
-              stepSize: 20,
-              font: {
-                size: 16
-              }
-            }
-          },
-          x: {
-            ticks: {
-              font: {
-                size: 16 // 设置X轴字体大小
-              }
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            labels: {
-              font: {
-                size: 16 // 设置标签文字大小
-              }
-            }
-          },
-          tooltip: {
-            callbacks: {
-              label: function (context) {
-                return context.dataset.label + ': ' + context.parsed.y;
-              }
-            }
-          }
-        },
-        onHover: (event, chartElement) => {
-          event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
-        }
-      }
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-      // Data for the "Diagrams" chart
-      const data_Diagrams = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [27.6, 30.1, 31.8, 30.0, 32.0, 46.8],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-
-      // "data_Diagrams" chart
-      new Chart(document.getElementById('chart_Diagrams'), {
-        type: 'bar',
-        data: data_Diagrams,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Tables" chart
-      const data_Tables = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [26.6, 29.0, 29.8, 27.8, 27.8, 61.8],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Tables'), {
-        type: 'bar',
-        data: data_Tables,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_PlotsAndCharts " chart
-      const data_PlotsAndCharts = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [24.8, 31.8, 36.2, 30.4, 35.8, 55.6],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_PlotsAndCharts'), {
-        type: 'bar',
-        data: data_PlotsAndCharts,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_ChemicalStructures " chart
-      const data_ChemicalStructures = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [25.0, 27.2, 27.1, 26.7, 25.5, 50.6],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_ChemicalStructures'), {
-        type: 'bar',
-        data: data_ChemicalStructures,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Photographs " chart
-      const data_Photographs = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [27.6, 40.5, 41.4, 44.4, 42.0, 64.2],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Photographs'), {
-        type: 'bar',
-        data: data_Photographs,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Paintings " chart
-      const data_Paintings = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [28.7, 57.2, 53.6, 56.3, 52.1, 75.9],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Paintings'), {
-        type: 'bar',
-        data: data_Paintings,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_GeometricShapes " chart
-      const data_GeometricShapes = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [21.1, 25.3, 21.4, 25.6, 28.3, 40.2],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_GeometricShapes'), {
-        type: 'bar',
-        data: data_GeometricShapes,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_SheetMusic " chart
-      const data_SheetMusic = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [35.2, 33.4, 34.6, 35.8, 34.9, 38.8],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_SheetMusic'), {
-        type: 'bar',
-        data: data_SheetMusic,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_MedicalImages " chart
-      const data_MedicalImages = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [25.4, 29.8, 31.6, 36.4, 29.8, 59.6],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_MedicalImages'), {
-        type: 'bar',
-        data: data_MedicalImages,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_PathologicalImages " chart
-      const data_PathologicalImages = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [26.5, 27.7, 31.2, 35.2, 35.6, 63.6],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_PathologicalImages'), {
-        type: 'bar',
-        data: data_PathologicalImages,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_MicroscopicImages " chart
-      const data_MicroscopicImages = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [27.0, 37.6, 29.2, 36.3, 32.7, 58.0],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_MicroscopicImages'), {
-        type: 'bar',
-        data: data_MicroscopicImages,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_MRIsCTScansXrays " chart
-      const data_MRIsCTScansXrays = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [21.7, 36.9, 33.3, 39.4, 29.8, 50.0],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_MRIsCTScansXrays'), {
-        type: 'bar',
-        data: data_MRIsCTScansXrays,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_SketchesAndDrafts " chart
-      const data_SketchesAndDrafts = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [37.0, 32.1, 29.9, 38.0, 33.7, 55.4],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_SketchesAndDrafts'), {
-        type: 'bar',
-        data: data_SketchesAndDrafts,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Maps " chart
-      const data_Maps = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [38.2, 36.5, 45.9, 47.6, 43.5, 61.8],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Maps'), {
-        type: 'bar',
-        data: data_Maps,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_TechnicalBlueprints " chart
-      const data_TechnicalBlueprints = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [24.7, 25.9, 28.4, 25.3, 27.8, 38.9],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_TechnicalBlueprints'), {
-        type: 'bar',
-        data: data_TechnicalBlueprints,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_TreesAndGraphs " chart
-      const data_TreesAndGraphs = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [30.1, 28.1, 28.8, 28.8, 34.9, 50.0],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_TreesAndGraphs'), {
-        type: 'bar',
-        data: data_TreesAndGraphs,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_MathematicalNotations " chart
-      const data_MathematicalNotations = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [15.8, 27.1, 22.6, 21.8, 21.1, 45.9],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_MathematicalNotations'), {
-        type: 'bar',
-        data: data_MathematicalNotations,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_ComicsAndCartoons " chart
-      const data_ComicsAndCartoons = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [29.0, 51.9, 49.6, 54.2, 51.1, 68.7],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_ComicsAndCartoons'), {
-        type: 'bar',
-        data: data_ComicsAndCartoons,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Sculpture " chart
-      const data_Sculpture = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [30.8, 46.2, 49.6, 51.3, 53.0, 76.1],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Sculpture'), {
-        type: 'bar',
-        data: data_Sculpture,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Portraits " chart
-      const data_Portraits = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [20.9, 52.7, 46.2, 54.9, 47.3, 70.3],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Portraits'), {
-        type: 'bar',
-        data: data_Portraits,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Screenshots " chart
-      const data_Screenshots = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [38.6, 35.7, 38.6, 34.3, 47.1, 65.7],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Screenshots'), {
-        type: 'bar',
-        data: data_Screenshots,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Other " chart
-      const data_Other = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [28.3, 38.3, 50.0, 51.7, 58.3, 68.3],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Other'), {
-        type: 'bar',
-        data: data_Other,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Poster " chart
-      const data_Poster = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [38.6, 50.9, 52.6, 61.4, 64.9, 80.7],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Poster'), {
-        type: 'bar',
-        data: data_Poster,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_IconsAndSymbols " chart
-      const data_IconsAndSymbols = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [23.8, 66.7, 57.1, 59.5, 59.5, 78.6],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_IconsAndSymbols'), {
-        type: 'bar',
-        data: data_IconsAndSymbols,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_HistoricalTimelines " chart
-      const data_HistoricalTimelines = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [30.0, 36.7, 40.0, 43.3, 43.3, 63.3],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_HistoricalTimelines'), {
-        type: 'bar',
-        data: data_HistoricalTimelines,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_3DRenderings " chart
-      const data_3DRenderings = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [33.3, 28.6, 57.1, 38.1, 47.6, 47.6],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_3DRenderings'), {
-        type: 'bar',
-        data: data_3DRenderings,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_DNASequences " chart
-      const data_DNASequences = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [20.0, 45.0, 25.0, 25.0, 45.0, 55.0],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_DNASequences'), {
-        type: 'bar',
-        data: data_DNASequences,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Landscapes " chart
-      const data_Landscapes = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [43.8, 43.8, 50.0, 31.2, 62.5, 68.8],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Landscapes'), {
-        type: 'bar',
-        data: data_Landscapes,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_LogosAndBranding " chart
-      const data_LogosAndBranding = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [21.4, 57.1, 64.3, 35.7, 50.0, 85.7],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_LogosAndBranding'), {
-        type: 'bar',
-        data: data_LogosAndBranding,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-
-      // "data_Advertisements " chart
-      const data_Advertisements = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-          data: [30.0, 60.0, 50.0, 60.0, 70.0, 100.0],
-          backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-          borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-          hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-      };
-      new Chart(document.getElementById('chart_Advertisements'), {
-        type: 'bar',
-        data: data_Advertisements,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20
-              }
-            },
-            x: {
-              display: false
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-            }
-          }
-        }
-      });
-    });
-
-  </script> -->
 
   <style>
     .hidden {
@@ -2072,6 +520,107 @@ export default ResultsTable;
     td:hover {
       background-color: #ffffff;
     }
+
+    .results-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .hero {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    margin-bottom: 30px;
+  }
+
+  .main-title {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin: 0;
+  }
+
+  .title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  /* 指标列样式 */
+  td:first-child {
+    background-color: #2c5282;
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Setting/Task列样式 */
+  td:nth-child(2) {
+    background-color: #f8f9fa;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  /* Classic部分的表头 */
+  .classic-header {
+    background-color: #4a5568;
+    color: white;
+  }
+
+  /* Recent部分的表头 */
+  .recent-header {
+    background-color: #2d3748;
+    color: white;
+  }
+
+  /* 下划线突出显示 */
+  .underline {
+    background-color: #ebf8ff;
+    font-weight: bold;
+  }
+
+  /* 粗体突出显示 */
+  .bold {
+    background-color: #bee3f8;
+    font-weight: bold;
+  }
+
+  /* 分隔线 */
+  .separator td {
+    padding: 0;
+    border: none;
+    height: 20px;
+    background-color: #f8f9fa;
+  }
+
+  .caption {
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
   </style>
 
 </body>
