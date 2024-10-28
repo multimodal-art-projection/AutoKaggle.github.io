@@ -1,5 +1,5 @@
-# CodeEditorBench
-Homepage of CodeEditorBench, A Framework for Evaluating Code Editing Capability of Large Language Models. 
+# AutoKaggle
+Homepage of AutoKaggle, A Multi-Agent Framework for Autonomous Data Science Competitions. 
 
 This website is adapted from [Nerfies website](https://nerfies.github.io) and [MathVista](https://mathvista.github.io/).
 
