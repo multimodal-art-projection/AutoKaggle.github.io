@@ -228,7 +228,7 @@
     </div>
   </section>
 
-  <!-- After the abstract section and before the teaser section -->
+  <!-- Introduction -->
   <section class="section">
     <div class="container">
       <div class="columns is-centered has-text-centered">
@@ -259,6 +259,82 @@
             <p>
               In our evaluation across 8 Kaggle data science competitions, AutoKaggle achieved a validation submission rate of 0.85 and a comprehensive score of 0.82, demonstrating its effectiveness in handling complex data science tasks while maintaining transparency and interpretability throughout the process.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tool Schema Section -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Tool Schema Example</h2>
+          <div class="content">
+            <p>
+              We provide two schema formats for each machine learning tool: JSON and Markdown.
+              Here, we take the FillMissingValues tool as an example and provide schemas in both formats.
+            </p>
+            
+            <!-- Tool Schema Box -->
+            <div class="box has-background-info-light" style="border: 2px solid #3298dc; padding: 1.5rem; margin-top: 1.5rem;">
+              <h3 class="title is-4 has-text-info-dark">Markdown-formatted tool schema for FillMissingValues</h3>
+              
+              <div class="content has-text-left">
+                <p><strong>Description:</strong> Fill missing values in specified columns of a DataFrame. This tool can handle both numerical and categorical features by using different filling methods.</p>
+                
+                <p><strong>Applicable Situations:</strong> Handle missing values in various types of features.</p>
+                
+                <p><strong>Parameters:</strong></p>
+                <ul>
+                  <li>
+                    <strong><code>data</code>:</strong>
+                    <ul>
+                      <li><strong>Type:</strong> <code>pd.DataFrame</code></li>
+                      <li><strong>Description:</strong> A pandas DataFrame object representing the dataset.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong><code>columns</code>:</strong>
+                    <ul>
+                      <li><strong>Type:</strong> <code>string | array</code></li>
+                      <li><strong>Description:</strong> The name(s) of the column(s) where missing values should be filled.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong><code>method</code>:</strong>
+                    <ul>
+                      <li><strong>Type:</strong> <code>string</code></li>
+                      <li><strong>Description:</strong> The method to use for filling missing values.</li>
+                      <li><strong>Enum:</strong> <code>auto | mean | median | mode | constant</code></li>
+                      <li><strong>Default:</strong> <code>auto</code></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong><code>fill_value</code>:</strong>
+                    <ul>
+                      <li><strong>Type:</strong> <code>number | string | null</code></li>
+                      <li><strong>Description:</strong> The value to use when method is <code>constant</code>.</li>
+                      <li><strong>Default:</strong> <code>None</code></li>
+                    </ul>
+                  </li>
+                </ul>
+                
+                <p><strong>Required:</strong> <code>data</code>, <code>columns</code></p>
+                
+                <p><strong>Result:</strong> Successfully fill missing values in the specified column(s) of data.</p>
+                
+                <p><strong>Notes:</strong></p>
+                <ul>
+                  <li>The <code>auto</code> method uses mean for numeric columns and mode for non-numeric columns.</li>
+                  <li>Using <code>mean</code> or <code>median</code> on non-numeric columns will raise an error.</li>
+                  <li>The <code>mode</code> method uses the most frequent value, which may not always be appropriate.</li>
+                  <li>Filling missing values can introduce bias, especially if the data is not missing completely at random.</li>
+                  <li>Consider the impact of filling missing values on your analysis and model performance.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -431,29 +507,31 @@
   </div>
 
   <div class="content has-text-justified">
-    <p>
-      <strong>Made submission and Valid submission.</strong>
-      We first evaluated the success rate of valid submission.csv file generation across different experimental configurations. 
-      The AutoKaggle framework, implemented with GPT-4o, demonstrated superior performance with an average valid submission rate of 83% across all 8 Kaggle tasks, surpassing the AIDE framework by 28%. 
-      These results underscore the robustness of our framework in executing comprehensive data science workflows. 
-      While the AIDE framework successfully processed Tasks 1-7, which involved single-variable classification or regression on tabular data, it failed to generate valid submissions for Task 8, a multi-variable classification problem. 
-      This differential performance demonstrates our framework's versatility in handling diverse tabular data tasks.
-    </p>
+    <div class="column is-four-fifths">
+      <p>
+        <strong>Made submission and Valid submission.</strong>
+        We first evaluated the success rate of valid submission.csv file generation across different experimental configurations. 
+        The AutoKaggle framework, implemented with GPT-4o, demonstrated superior performance with an average valid submission rate of 83% across all 8 Kaggle tasks, surpassing the AIDE framework by 28%. 
+        These results underscore the robustness of our framework in executing comprehensive data science workflows. 
+        While the AIDE framework successfully processed Tasks 1-7, which involved single-variable classification or regression on tabular data, it failed to generate valid submissions for Task 8, a multi-variable classification problem. 
+        This differential performance demonstrates our framework's versatility in handling diverse tabular data tasks.
+      </p>
 
-    <p>
-      Another interesting observation is that within the AutoKaggle framework, the GPT-4o model achieved better results than the o1-mini model, despite the latter's purported superior reasoning capabilities. 
-      This performance difference emerged solely from varying the model used in the Planner component. 
-      We hypothesize that this counterintuitive result stems from o1-mini's tendency toward excessive planning complexity, which proves disadvantageous in our streamlined, phase-based workflow architecture. 
-      This same consideration influenced our decision to maintain GPT-4o as the Developer's base model, as our experiments indicated that an o1-mini-based Developer would significantly increase code verbosity, expanding 100-line solutions to approximately 500 lines through the introduction of superfluous components such as logging systems.
-    </p>
+      <p>
+        Another interesting observation is that within the AutoKaggle framework, the GPT-4o model achieved better results than the o1-mini model, despite the latter's purported superior reasoning capabilities. 
+        This performance difference emerged solely from varying the model used in the Planner component. 
+        We hypothesize that this counterintuitive result stems from o1-mini's tendency toward excessive planning complexity, which proves disadvantageous in our streamlined, phase-based workflow architecture. 
+        This same consideration influenced our decision to maintain GPT-4o as the Developer's base model, as our experiments indicated that an o1-mini-based Developer would significantly increase code verbosity, expanding 100-line solutions to approximately 500 lines through the introduction of superfluous components such as logging systems.
+      </p>
 
-    <p>
-      <strong>Comprehensive Score.</strong>
-      Subsequently, we compared the overall performance of different settings across 8 Kaggle tasks. 
-      AutoKaggle with GPT-4o achieved the highest comprehensive score in 5 tasks and demonstrated the best overall performance. 
-      As shown in the figure above, the comparison of different settings based on the average normalized performance score metric shows that AutoKaggle with o1-mini achieved the highest overall score. 
-      This indicates that although the o1-mini-based Planner generated overly complex plans that increased development difficulty, successfully executing these plans according to specifications led to superior performance outcomes.
-    </p>
+      <p>
+        <strong>Comprehensive Score.</strong>
+        Subsequently, we compared the overall performance of different settings across 8 Kaggle tasks. 
+        AutoKaggle with GPT-4o achieved the highest comprehensive score in 5 tasks and demonstrated the best overall performance. 
+        As shown in the figure above, the comparison of different settings based on the average normalized performance score metric shows that AutoKaggle with o1-mini achieved the highest overall score. 
+        This indicates that although the o1-mini-based Planner generated overly complex plans that increased development difficulty, successfully executing these plans according to specifications led to superior performance outcomes.
+      </p>
+    </div>
   </div>
 
   <!-- @PAN TODO: bibtex -->
