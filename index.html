@@ -273,16 +273,13 @@
   </section>
   <section class="section">
     <div class="results-container">
-      <div class="hero">
-        <h1 class="main-title">Experiment Results</h1>
-      </div>
       <h2 class="title">Main Results</h2>
       <table>
         <tr>
           <th rowspan="2">Metric</th>
           <th rowspan="2">Setting / Task</th>
-          <th colspan="4" class="classic-header">Classic</th>
-          <th colspan="4" class="recent-header">Recent</th>
+          <th colspan="4">Classic</th>
+          <th colspan="4">Recent</th>
           <th rowspan="2">Avg.</th>
         </tr>
         <tr>
@@ -416,8 +413,7 @@
       <div class="caption">
         Table 1: Made submission, valid submission and comprehensive score on 8 Kaggle tasks. 
         Each experiment is repeated with 5 trials. The best performances on individual tasks 
-        are highlighted in light blue, and the best performances across all tasks are highlighted 
-        in darker blue.
+        are underlined, and the best performances across all tasks are bolded.
       </div>
     </div>
   </section>
@@ -521,36 +517,10 @@
       background-color: #ffffff;
     }
 
-    .results-container {
-    max-width: 1200px;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-  }
-
-  .hero {
-    background-color: #f5f5f5;
-    padding: 40px 0;
-    margin-bottom: 30px;
-  }
-
-  .main-title {
-    font-size: 2.5em;
-    color: #333;
-    text-align: center;
-    margin: 0;
-  }
-
-  .title {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-
   table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    background-color: white;
+    margin: 20px 0;
   }
 
   th, td {
@@ -559,47 +529,24 @@
     text-align: center;
   }
 
-  th {
+  /* 表头和第一列的浅灰色背景 */
+  th, td:first-child {
     background-color: #f4f4f4;
-    color: #333;
   }
 
-  /* 指标列样式 */
-  td:first-child {
-    background-color: #2c5282;
-    color: white;
-    font-weight: bold;
-  }
-
-  /* Setting/Task列样式 */
+  /* 第二列左对齐 */
   td:nth-child(2) {
-    background-color: #f8f9fa;
-    font-weight: 500;
     text-align: left;
     padding-left: 15px;
   }
 
-  /* Classic部分的表头 */
-  .classic-header {
-    background-color: #4a5568;
-    color: white;
-  }
-
-  /* Recent部分的表头 */
-  .recent-header {
-    background-color: #2d3748;
-    color: white;
-  }
-
-  /* 下划线突出显示 */
+  /* 下划线突出显示（单个task的最佳结果） */
   .underline {
-    background-color: #ebf8ff;
-    font-weight: bold;
+    text-decoration: underline;
   }
 
-  /* 粗体突出显示 */
+  /* 粗体突出显示（avg.的最佳结果） */
   .bold {
-    background-color: #bee3f8;
     font-weight: bold;
   }
 
@@ -608,18 +555,6 @@
     padding: 0;
     border: none;
     height: 20px;
-    background-color: #f8f9fa;
-  }
-
-  .caption {
-    text-align: center;
-    color: #666;
-    font-size: 0.9em;
-    margin-top: 10px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.5;
   }
   </style>
 
