@@ -272,148 +272,154 @@
     </div>
   </section>
   <section class="section">
-    <div class="results-container">
-      <h2 class="title">Main Results</h2>
-      <table>
-        <tr>
-          <th rowspan="2">Metric</th>
-          <th rowspan="2">Setting / Task</th>
-          <th colspan="4">Classic</th>
-          <th colspan="4">Recent</th>
-          <th rowspan="2">Avg.</th>
-        </tr>
-        <tr>
-          <th>Task 1</th>
-          <th>Task 2</th>
-          <th>Task 3</th>
-          <th>Task 4</th>
-          <th>Task 5</th>
-          <th>Task 6</th>
-          <th>Task 7</th>
-          <th>Task 8</th>
-        </tr>
-        <tr>
-          <td rowspan="3">Made Submission</td>
-          <td>AutoKaggle gpt-4o</td>
-          <td class="underline">1</td>
-          <td class="underline">0.80</td>
-          <td class="underline">0.80</td>
-          <td class="underline">1</td>
-          <td>0.80</td>
-          <td class="underline">0.80</td>
-          <td class="underline">0.80</td>
-          <td class="underline">0.80</td>
-          <td class="bold">0.85</td>
-        </tr>
-        <tr>
-          <td>AutoKaggle o1-mini</td>
-          <td class="underline">1</td>
-          <td>0.60</td>
-          <td>0.60</td>
-          <td class="underline">1</td>
-          <td>0.60</td>
-          <td class="underline">0.80</td>
-          <td>0.60</td>
-          <td>0.60</td>
-          <td>0.73</td>
-        </tr>
-        <tr>
-          <td>AIDE gpt-4o</td>
-          <td class="underline">1</td>
-          <td>0.40</td>
-          <td>0.20</td>
-          <td>0.60</td>
-          <td class="underline">1</td>
-          <td class="underline">0.80</td>
-          <td class="underline">0.80</td>
-          <td>0</td>
-          <td>0.60</td>
-        </tr>
-        <tr class="separator">
-          <td colspan="11"></td>
-        </tr>
-        <tr>
-          <td rowspan="3">Valid Submission</td>
-          <td>AutoKaggle gpt-4o</td>
-          <td class="underline">1</td>
-          <td class="underline">0.80</td>
-          <td class="underline">0.80</td>
-          <td class="underline">1</td>
-          <td class="underline">0.80</td>
-          <td>0.60</td>
-          <td class="underline">0.80</td>
-          <td class="underline">0.80</td>
-          <td class="bold">0.83</td>
-        </tr>
-        <tr>
-          <td>AutoKaggle o1-mini</td>
-          <td class="underline">1</td>
-          <td>0.60</td>
-          <td>0.60</td>
-          <td class="underline">1</td>
-          <td>0.60</td>
-          <td>0.60</td>
-          <td>0.60</td>
-          <td>0.60</td>
-          <td>0.70</td>
-        </tr>
-        <tr>
-          <td>AIDE gpt-4o</td>
-          <td class="underline">1</td>
-          <td>0.40</td>
-          <td>0.20</td>
-          <td>0.40</td>
-          <td class="underline">1</td>
-          <td class="underline">0.80</td>
-          <td class="underline">0.80</td>
-          <td>0</td>
-          <td>0.58</td>
-        </tr>
-        <tr class="separator">
-          <td colspan="11"></td>
-        </tr>
-        <tr>
-          <td rowspan="3">Comprehensive Score</td>
-          <td>AutoKaggle gpt-4o</td>
-          <td class="underline">0.888</td>
-          <td class="underline">0.786</td>
-          <td class="underline">0.831</td>
-          <td>0.862</td>
-          <td>0.810</td>
-          <td>0.728</td>
-          <td class="underline">0.848</td>
-          <td class="underline">0.812</td>
-          <td class="bold">0.821</td>
-        </tr>
-        <tr>
-          <td>AutoKaggle o1-mini</td>
-          <td>0.879</td>
-          <td>0.680</td>
-          <td>0.729</td>
-          <td class="underline">0.863</td>
-          <td>0.709</td>
-          <td>0.735</td>
-          <td>0.742</td>
-          <td>0.735</td>
-          <td>0.759</td>
-        </tr>
-        <tr>
-          <td>AIDE gpt-4o</td>
-          <td>0.872</td>
-          <td>0.597</td>
-          <td>0.542</td>
-          <td>0.561</td>
-          <td class="underline">0.918</td>
-          <td class="underline">0.793</td>
-          <td class="underline">0.848</td>
-          <td>0</td>
-          <td>0.641</td>
-        </tr>
-      </table>
-      <div class="caption">
-        Table 1: Made submission, valid submission and comprehensive score on 8 Kaggle tasks. 
-        Each experiment is repeated with 5 trials. The best performances on individual tasks 
-        are underlined, and the best performances across all tasks are bolded.
+    <div class="container is-max-desktop">
+      <div class="content has-text-centered">
+        <h2 class="title">Main Results</h2>
+        <table>
+          <tr>
+            <th rowspan="2">Metric</th>
+            <th rowspan="2">Setting / Task</th>
+            <th colspan="4">Classic</th>
+            <th colspan="4">Recent</th>
+            <th rowspan="2">Avg.</th>
+          </tr>
+          <tr>
+            <th>Task 1</th>
+            <th>Task 2</th>
+            <th>Task 3</th>
+            <th>Task 4</th>
+            <th>Task 5</th>
+            <th>Task 6</th>
+            <th>Task 7</th>
+            <th>Task 8</th>
+          </tr>
+          <tr>
+            <td rowspan="3">Made Submission</td>
+            <td>AutoKaggle gpt-4o</td>
+            <td class="underline">1</td>
+            <td class="underline">0.80</td>
+            <td class="underline">0.80</td>
+            <td class="underline">1</td>
+            <td>0.80</td>
+            <td class="underline">0.80</td>
+            <td class="underline">0.80</td>
+            <td class="underline">0.80</td>
+            <td class="bold">0.85</td>
+          </tr>
+          <tr>
+            <td>AutoKaggle o1-mini</td>
+            <td class="underline">1</td>
+            <td>0.60</td>
+            <td>0.60</td>
+            <td class="underline">1</td>
+            <td>0.60</td>
+            <td class="underline">0.80</td>
+            <td>0.60</td>
+            <td>0.60</td>
+            <td>0.73</td>
+          </tr>
+          <tr>
+            <td>AIDE gpt-4o</td>
+            <td class="underline">1</td>
+            <td>0.40</td>
+            <td>0.20</td>
+            <td>0.60</td>
+            <td class="underline">1</td>
+            <td class="underline">0.80</td>
+            <td class="underline">0.80</td>
+            <td>0</td>
+            <td>0.60</td>
+          </tr>
+          <tr class="separator">
+            <td colspan="11"></td>
+          </tr>
+          <tr>
+            <td rowspan="3">Valid Submission</td>
+            <td>AutoKaggle gpt-4o</td>
+            <td class="underline">1</td>
+            <td class="underline">0.80</td>
+            <td class="underline">0.80</td>
+            <td class="underline">1</td>
+            <td class="underline">0.80</td>
+            <td>0.60</td>
+            <td class="underline">0.80</td>
+            <td class="underline">0.80</td>
+            <td class="bold">0.83</td>
+          </tr>
+          <tr>
+            <td>AutoKaggle o1-mini</td>
+            <td class="underline">1</td>
+            <td>0.60</td>
+            <td>0.60</td>
+            <td class="underline">1</td>
+            <td>0.60</td>
+            <td>0.60</td>
+            <td>0.60</td>
+            <td>0.60</td>
+            <td>0.70</td>
+          </tr>
+          <tr>
+            <td>AIDE gpt-4o</td>
+            <td class="underline">1</td>
+            <td>0.40</td>
+            <td>0.20</td>
+            <td>0.40</td>
+            <td class="underline">1</td>
+            <td class="underline">0.80</td>
+            <td class="underline">0.80</td>
+            <td>0</td>
+            <td>0.58</td>
+          </tr>
+          <tr class="separator">
+            <td colspan="11"></td>
+          </tr>
+          <tr>
+            <td rowspan="3">Comprehensive Score</td>
+            <td>AutoKaggle gpt-4o</td>
+            <td class="underline">0.888</td>
+            <td class="underline">0.786</td>
+            <td class="underline">0.831</td>
+            <td>0.862</td>
+            <td>0.810</td>
+            <td>0.728</td>
+            <td class="underline">0.848</td>
+            <td class="underline">0.812</td>
+            <td class="bold">0.821</td>
+          </tr>
+          <tr>
+            <td>AutoKaggle o1-mini</td>
+            <td>0.879</td>
+            <td>0.680</td>
+            <td>0.729</td>
+            <td class="underline">0.863</td>
+            <td>0.709</td>
+            <td>0.735</td>
+            <td>0.742</td>
+            <td>0.735</td>
+            <td>0.759</td>
+          </tr>
+          <tr>
+            <td>AIDE gpt-4o</td>
+            <td>0.872</td>
+            <td>0.597</td>
+            <td>0.542</td>
+            <td>0.561</td>
+            <td class="underline">0.918</td>
+            <td class="underline">0.793</td>
+            <td class="underline">0.848</td>
+            <td>0</td>
+            <td>0.641</td>
+          </tr>
+        </table>
+        <div class="caption">
+          Table 1: Made submission, valid submission and comprehensive score on 8 Kaggle tasks. 
+          Each experiment is repeated with 5 trials. The best performances on individual tasks 
+          are underlined, and the best performances across all tasks are bolded.
+        </div>
+        <img src="static/images/average_nps.png" alt="Average NPS" width="100%" />
+        <p style="text-align: center;">
+          Figure 3: Average normalized performance score for different settings/tasks.
+        </p>
       </div>
     </div>
   </section>
