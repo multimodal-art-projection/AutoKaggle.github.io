@@ -444,6 +444,7 @@
       </div>
     </div>
   </section>
+
   <section class="section">
     <div class="container is-max-desktop">
       <div class="content has-text-centered">
@@ -593,15 +594,17 @@
     </div>
   </section>
 
-  <div class="container is-max-desktop">
-    <div class="content has-text-centered">
-      <h2 class="title">Average NPS for Different Settings/Tasks</h2>
-      <img src="static/images/average_nps_new.png" alt="Average NPS" width="100%" />
-      <p style="text-align: center; margin-bottom: 3rem;">
-        Average normalized performance score for different settings/tasks.
-      </p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="content has-text-centered">
+        <h2 class="title">Average NPS for Different Settings/Tasks</h2>
+        <img src="static/images/average_nps_new.png" alt="Average NPS" width="100%" />
+        <p style="text-align: center; margin-bottom: 3rem;">
+          Average normalized performance score for different settings/tasks.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 
   <div class="container">
     <div class="columns is-centered has-text-centered">
@@ -840,19 +843,20 @@
     height: 20px;
   }
 
-  /* 修改表格表头背景色 */
-  th {
-    background-color: #e8f0fe !important; /* 淡蓝色背景 */
+  /* 修改表格表头和第一列的背景色为更淡的蓝色 */
+  th, td:first-child {
+    background-color: #f5f8fe !important; /* 更淡的蓝色背景 */
   }
 
-  /* 统一section和container的间距 */
+  /* 其他样式保持不变 */
   .section {
-    padding: 3rem 1.5rem;  /* 标准内边距 */
+    padding: 3rem 1.5rem;
   }
   
   .container {
-    margin-bottom: 3rem;  /* 统一底部间距 */
+    margin-bottom: 3rem;
   }
+
   </style>
 
 </body>
