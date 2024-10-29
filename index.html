@@ -256,7 +256,7 @@
               </p>
             </div>
 
-            <p>
+            <p style="margin-bottom: 2rem;">
               In our evaluation across 8 Kaggle data science competitions, AutoKaggle achieved a validation submission rate of 0.85 and a comprehensive score of 0.82, demonstrating its effectiveness in handling complex data science tasks while maintaining transparency and interpretability throughout the process.
             </p>
           </div>
@@ -339,7 +339,109 @@
   <!-- RESULTS SECTION -->
   <section class="hero is-light is-small">
     <div class="hero-body has-text-centered">
-      <h1 class="title is-1 mmmu">Experiment Results</h1>
+      <h1 class="title is-1 mmmu">Experiment</h1>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="content has-text-centered">
+        <h2 class="title">Dataset</h2>
+        <p class="has-text-left">
+          We select eight Kaggle competitions that predominantly use tabular datasets, focusing on classification and regression tasks. These competitions are categorized into two types: <i>classic Kaggle</i> and <i>Recent Kaggle</i>. Classic Kaggle competitions are those that begin before October 2023 with at least 500 participants, whereas Recent Kaggle competitions begin in 2024 or later. As our analysis relies on GPT-4o, which is trained on data available until October 2023, it includes most of the Classic Kaggle competitions. To evaluate the generalization capabilities of AutoKaggle, we therefore focus on competitions initiated after 2024. Additionally, we classify these competitions into three difficulty levels: easy, medium, and hard. For each dataset, we access the corresponding competition's homepage on Kaggle, extract content from the overview and data description sections, and compile this information into a file named overview.txt. This file, along with the original competition data files, forms the primary input for AutoKaggle.
+        </p>
+        <table>
+          <tr>
+            <th>Category</th>
+            <th>No.</th>
+            <th>Task Name</th>
+            <th>Task</th>
+            <th>Level</th>
+            <th>Teams</th>
+            <th>Train</th>
+            <th>Test</th>
+          </tr>
+          <tr>
+            <td rowspan="4">Classic</td>
+            <td>1</td>
+            <td>Titanic</td>
+            <td>Classification</td>
+            <td>Medium</td>
+            <td>13994</td>
+            <td>891</td>
+            <td>418</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Spaceship Titanic</td>
+            <td>Classification</td>
+            <td>Easy</td>
+            <td>1720</td>
+            <td>8693</td>
+            <td>4277</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>House Prices</td>
+            <td>Regression</td>
+            <td>Medium</td>
+            <td>4383</td>
+            <td>1460</td>
+            <td>1459</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Monsters</td>
+            <td>Classification</td>
+            <td>Easy</td>
+            <td>763</td>
+            <td>371</td>
+            <td>529</td>
+          </tr>
+          <tr class="separator">
+            <td colspan="8"></td>
+          </tr>
+          <tr>
+            <td rowspan="4">Recent</td>
+            <td>5</td>
+            <td>Academic Success</td>
+            <td>Regression</td>
+            <td>Medium</td>
+            <td>2684</td>
+            <td>76.5K</td>
+            <td>51K</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Bank Churn</td>
+            <td>Regression</td>
+            <td>Easy</td>
+            <td>3632</td>
+            <td>165K</td>
+            <td>110K</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Obesity Risk</td>
+            <td>Classification</td>
+            <td>Easy</td>
+            <td>3587</td>
+            <td>20.8K</td>
+            <td>13.8K</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Plate Defect</td>
+            <td>Regression</td>
+            <td>Medium</td>
+            <td>2199</td>
+            <td>19.2K</td>
+            <td>12.8K</td>
+          </tr>
+        </table>
+        <div class="caption">
+          Table 1: Selected Kaggle tasks. For each task, we show its number, category, difficulty level, number of teams, train size and test size in dataset.
+        </div>
+      </div>
     </div>
   </section>
   <section class="section">
